@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #111111;
+    --color-secondary: #F5F2EE;
+    --color-accent: #D4AF37;
+    --color-background: #FFFFFF;
+    --color-muted: #F8F8F8;
+  }
+
+  html {
+    @apply scroll-smooth antialiased text-primary bg-background;
+    font-family: "Plus Jakarta Sans", "Outfit", sans-serif;
+  }
+
+  body {
+    @apply min-h-screen selection:bg-accent/20 selection:text-primary overflow-x-hidden;
+  }
+
+  /* Elegant heading typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-medium tracking-tight text-primary;
+  }
+
+  /* Custom scrollbar for luxury feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8F8F8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B59021;
+  }
+}
+
+@layer components {
+  /* Reusable Glass Effects */
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-soft;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-[#D4AF37]/15 shadow-soft hover:shadow-luxury transition-all duration-500;
+  }
+
+  .glass-dark {
+    @apply bg-primary/85 backdrop-blur-lg border border-white/10 text-white shadow-luxury;
+  }
+
+  /* Luxury Gold Gradient & Glows */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[#B59021] via-[#D4AF37] to-[#E5C45D] bg-clip-text text-transparent;
+  }
+
+  .border-gradient-gold {
+    border-image: linear-gradient(to right, #B59021, #D4AF37, #E5C45D) 1;
+  }
+
+  /* Shimmer Gold Overlay */
+  .shimmer-gold {
+    background: linear-gradient(
+      90deg,
+      rgba(212, 175, 55, 0) 0%,
+      rgba(212, 175, 55, 0.15) 50%,
+      rgba(212, 175, 55, 0) 100%
+    );
+    background-size: 200% 100%;
+  }
+}
+
+@layer utilities {
+  /* Micro animation helpers */
+  .hover-lift {
+    @apply transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) hover:-translate-y-1.5;
+  }
+
+  .hover-scale-subtle {
+    @apply transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) hover:scale-105;
+  }
+
+  .parallax-layer {
+    @apply will-change-transform transition-transform duration-300 ease-out;
+  }
+}
