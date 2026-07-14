@@ -80,8 +80,11 @@ const handleCardClick = (id: string | number) => {
     <!-- Main Hero Section -->
     <HomeHeroSection />
 
+    <!-- Premium About Section (Story, Overlapping Images, 5 Pillars, Timeline & Branches) -->
+    <HomeAboutSection />
+
     <!-- Design System Section Divider -->
-    <section id="about" class="pt-20 pb-8 bg-secondary/30 border-y border-muted-border/80">
+    <section id="design-system" class="pt-20 pb-8 bg-secondary/30 border-y border-muted-border/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <span class="text-xs font-body uppercase tracking-[0.3em] text-[#B59021] font-semibold">
           Architectural Foundation
@@ -515,40 +518,7 @@ const handleCardClick = (id: string | number) => {
       </section>
     </main>
 
-    <!-- Branches Section Placeholder / Anchor -->
-    <section id="branches" class="bg-[#FAFAF8] py-16 border-t border-muted">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div class="text-center max-w-2xl mx-auto space-y-2">
-          <span class="text-xs font-body uppercase tracking-[0.25em] text-[#B59021] font-semibold">Our Boutiques</span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-medium text-primary">Two Premier Locations</h2>
-          <p class="text-muted-text text-sm">Experience personal styling sessions, bespoke tailoring, and exclusive outlet discoveries in our luxury showrooms.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="glass-card p-8 rounded-xl space-y-4">
-            <div class="flex items-center justify-between">
-              <h3 class="font-heading text-2xl font-medium text-primary">Flagship Showroom</h3>
-              <UiBadge variant="gold" size="sm">Main Branch</UiBadge>
-            </div>
-            <p class="text-sm text-muted-text">Haute Couture, Evening Wear, Luxury Handbags & Bespoke Accessories.</p>
-            <div class="text-xs font-mono text-muted-text space-y-1">
-              <p>📍 Downtown Luxury District, Avenue 12</p>
-              <p>🕒 Open Daily: 10:00 AM — 10:00 PM</p>
-            </div>
-          </div>
-          <div class="glass-card p-8 rounded-xl space-y-4">
-            <div class="flex items-center justify-between">
-              <h3 class="font-heading text-2xl font-medium text-primary">Premium Outlet Lounge</h3>
-              <UiBadge variant="outlet" size="sm">Up to 50% Off</UiBadge>
-            </div>
-            <p class="text-sm text-muted-text">Past Season Designer Collections, High-End Makeup Compacts & Leather Goods.</p>
-            <div class="text-xs font-mono text-muted-text space-y-1">
-              <p>📍 Galleria Promenade Boulevard, Suite 4B</p>
-              <p>🕒 Open Daily: 11:00 AM — 11:00 PM</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Contact & Footer Section -->
     <footer id="contact" class="bg-primary text-white py-16 border-t border-white/10 mt-auto">
