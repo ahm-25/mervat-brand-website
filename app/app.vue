@@ -74,6 +74,9 @@ const handleCardClick = (id: string | number) => {
 
 <template>
   <div class="min-h-screen bg-background text-primary font-body antialiased flex flex-col selection:bg-accent/20 selection:text-primary">
+    <!-- Global Custom Cursor for Awwwards experience -->
+    <UiCustomCursor />
+
     <!-- Sticky Luxury Navbar (Transparent on top, turns white on scroll) -->
     <LayoutNavbar />
 
@@ -82,6 +85,18 @@ const handleCardClick = (id: string | number) => {
 
     <!-- Premium About Section (Story, Overlapping Images, 5 Pillars, Timeline & Branches) -->
     <HomeAboutSection />
+
+    <!-- Elegant What We Offer Section -->
+    <HomeOffersSection />
+
+    <!-- Award-winning Gallery / Portfolio Section -->
+    <HomePortfolioSection />
+
+    <!-- Luxury Branches / Boutiques Section -->
+    <HomeBranchesSection />
+
+    <!-- Elegant Contact & Connectivity Section -->
+    <HomeContactSection />
 
     <!-- Design System Section Divider -->
     <section id="design-system" class="pt-20 pb-8 bg-secondary/30 border-y border-muted-border/80">
@@ -520,43 +535,8 @@ const handleCardClick = (id: string | number) => {
 
 
 
-    <!-- Contact & Footer Section -->
-    <footer id="contact" class="bg-primary text-white py-16 border-t border-white/10 mt-auto">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 justify-between">
-          <div class="md:col-span-5 space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-primary font-heading font-bold text-xl">
-                M
-              </div>
-              <div>
-                <span class="font-heading font-normal tracking-wide text-2xl block leading-none">MERVAT BRAND</span>
-                <span class="text-[10px] text-accent uppercase tracking-[0.25em] font-medium">Luxury Women's Fashion & Accessories</span>
-              </div>
-            </div>
-            <p class="text-sm text-gray-400 leading-relaxed max-w-sm font-light">
-              The ultimate luxury destination celebrating feminine power and timeless elegance through haute couture, handcrafted handbags, and curated beauty.
-            </p>
-          </div>
-          
-          <div class="md:col-span-4 space-y-3">
-            <h4 class="font-heading text-lg font-medium text-white">Client Concierge</h4>
-            <div class="text-sm text-gray-400 space-y-2 font-light">
-              <p>VIP Styling Inquiries: <span class="text-white font-medium">concierge@mervatbrand.com</span></p>
-              <p>Press & Brand Partnerships: <span class="text-white font-medium">press@mervatbrand.com</span></p>
-              <p>Telephone: <span class="text-white font-medium">+1 (800) 555-MERVAT</span></p>
-            </div>
-          </div>
-
-          <div class="md:col-span-3 flex flex-col items-start md:items-end justify-between gap-4">
-            <UiButton variant="luxury-gold" size="md">
-              Book VIP Appointment
-            </UiButton>
-            <span class="text-xs text-gray-500 font-mono">© 2026 Mervat Brand. All Rights Reserved.</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Elegant Luxury Footer -->
+    <LayoutFooter />
 
     <!-- Quick View Modal Sandbox -->
     <UiModal

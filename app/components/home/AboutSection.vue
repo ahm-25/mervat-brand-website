@@ -91,99 +91,77 @@ const timelineEvents = [
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 lg:space-y-32">
       
       <!-- PART 1: THE STORY & OVERLAPPING IMAGES EDITORIAL LAYOUT -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         
-        <!-- Left Column: Overlapping Editorial Images Composition (6 Cols) -->
-        <div class="lg:col-span-6 relative flex justify-center lg:justify-start pt-6 pb-12 sm:pb-16 lg:py-8">
-          <div class="relative w-full max-w-[420px] sm:max-w-[480px]">
+        <!-- Left Column: Asymmetrical Editorial Composition -->
+        <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-start pt-6 pb-16 lg:py-12 px-4 sm:px-8 lg:px-0">
+          <div class="relative w-full aspect-[4/5] sm:aspect-[3/4] max-w-md lg:max-w-lg mx-auto lg:mx-0 group cursor-pointer" data-cursor-text="Discover">
             
-            <!-- Primary Large Image (Back) -->
-            <div class="w-4/5 aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-luxury border border-[#D4AF37]/30 bg-secondary relative z-10 group">
+            <!-- Primary Massive Image -->
+            <div class="absolute inset-0 overflow-hidden w-full h-full bg-secondary shadow-2xl rounded-sm">
               <img
                 src="/images/luxury_dress.png"
                 alt="Mervat Brand Haute Couture Silhouette"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                class="w-full h-full object-cover object-top transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
             </div>
 
-            <!-- Overlapping Secondary Image (Front Bottom Right) -->
-            <div class="absolute -bottom-8 sm:-bottom-12 right-0 w-3/5 aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-luxury border-2 border-white/80 bg-white z-20 group transform transition-transform duration-700 hover:-translate-y-2">
+            <!-- Overlapping Minimalist Badge -->
+            <div class="absolute -left-2 sm:-left-8 top-16 sm:top-24 bg-white/95 backdrop-blur-xl p-6 sm:p-8 max-w-[240px] sm:max-w-[280px] shadow-2xl border-l-2 border-[#D4AF37] transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-4 z-30">
+              <p class="font-heading italic text-lg sm:text-xl text-primary leading-snug font-light">
+                “True luxury is where uncompromising craftsmanship meets everyday joy.”
+              </p>
+              <span class="block mt-6 font-body text-[9px] font-bold text-[#B59021] uppercase tracking-[0.3em]">
+                Mervat &mdash; Founder
+              </span>
+            </div>
+            
+            <!-- Floating Secondary Image -->
+            <div class="absolute -bottom-8 sm:-bottom-12 -right-2 sm:-right-8 w-3/5 aspect-[4/5] overflow-hidden shadow-2xl bg-white border border-white/50 transform transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-6 z-20 rounded-sm">
               <img
                 src="/images/luxury_handbag.png"
                 alt="Handcrafted Italian Leather Handbag"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                class="w-full h-full object-cover transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] scale-110 group-hover:scale-100"
               />
-              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono font-bold uppercase tracking-wider text-[#B59021] shadow-sm">
-                Artisanal Leather
-              </div>
             </div>
-
-            <!-- Floating Glass Quote Badge over Intersection -->
-            <div class="absolute top-12 -right-4 sm:-right-8 glass-card bg-white/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl border border-[#D4AF37]/40 shadow-luxury z-30 max-w-[220px] sm:max-w-[260px] animate-float">
-              <p class="font-heading italic text-sm sm:text-base text-primary leading-snug">
-                “True luxury is where uncompromising craftsmanship meets everyday joy.”
-              </p>
-              <div class="flex items-center gap-2 mt-3 pt-2 border-t border-muted">
-                <div class="w-6 h-6 rounded-full bg-primary text-accent flex items-center justify-center font-heading font-bold text-xs">
-                  M
-                </div>
-                <span class="font-body text-[11px] font-bold text-[#B59021] uppercase tracking-widest">
-                  Mervat — Founder
-                </span>
-              </div>
-            </div>
-
           </div>
         </div>
 
-        <!-- Right Column: Editorial Narrative & Affordable Luxury Philosophy (6 Cols) -->
-        <div class="lg:col-span-6 space-y-6 sm:space-y-8 animate-fade-in">
-          <div class="space-y-3">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/15 border border-accent/30 text-[#B59021] text-xs font-body font-semibold tracking-widest uppercase shadow-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#B59021]" />
+        <!-- Right Column: Editorial Narrative -->
+        <div class="w-full lg:w-1/2 space-y-10 sm:space-y-12 lg:pl-8 mt-12 lg:mt-0">
+          <div class="space-y-4 sm:space-y-6">
+            <span class="text-[10px] font-body uppercase tracking-[0.4em] text-[#B59021] font-semibold block">
               Our Heritage & Vision
             </span>
-            <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-primary leading-[1.08]">
+            <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-primary leading-[1.1]">
               The Story of <br />
-              <span class="italic font-light text-gradient-gold">Mervat Brand</span>
+              <span class="italic font-light text-gradient-gold">Mervat Brand.</span>
             </h2>
           </div>
 
-          <div class="space-y-4 font-body text-base sm:text-lg text-muted-text font-light leading-relaxed">
+          <div class="space-y-5 sm:space-y-6 font-body text-base sm:text-lg text-muted-text font-light leading-relaxed max-w-xl">
             <p>
-              Founded from a deep reverence for sophisticated elegance and feminine poise, <strong class="font-medium text-primary">Mervat Brand</strong> began as a dream to redefine the modern boutique experience across Egypt and the Middle East.
+              Founded from a deep reverence for sophisticated elegance and feminine poise, <strong class="font-normal text-primary">Mervat Brand</strong> began as a dream to redefine the modern boutique experience across Egypt and the Middle East.
             </p>
             <p>
-              We believe that every woman deserves to feel empowered and radiantly confident. That is why our houses bridge the worlds of bespoke high fashion with <strong class="font-semibold text-primary underline decoration-accent/60 underline-offset-4">Affordable Luxury</strong>. Whether selecting an architectural evening gown, a supple calf-leather handbag, or our finely milled makeup palettes, our promise remains unwavering: uncompromising quality at accessible, honest value.
+              We believe that every woman deserves to feel empowered and radiantly confident. That is why our houses bridge the worlds of bespoke high fashion with <strong class="font-normal text-primary">Affordable Luxury</strong>. Whether selecting an architectural evening gown, a supple calf-leather handbag, or our finely milled makeup palettes, our promise remains unwavering.
             </p>
           </div>
 
-          <!-- Highlight Philosophy Box -->
-          <div class="p-6 rounded-2xl bg-secondary/60 border border-[#D4AF37]/30 flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-[#B59021] flex-shrink-0 text-xl font-heading font-bold">
-              ★
-            </div>
-            <div class="space-y-1">
-              <h3 class="font-heading text-xl font-medium text-primary">
-                The Affordable Luxury Guarantee
-              </h3>
-              <p class="text-sm text-muted-text font-light leading-normal">
-                By maintaining direct artisanal atelier relationships and introducing our specialized Outlet Collections, we democratize elite fashion — offering authentic luxury goods with exceptional savings.
-              </p>
-            </div>
+          <!-- Refined Affordable Luxury Callout -->
+          <div class="pl-6 sm:pl-8 border-l border-[#D4AF37]/40 max-w-lg">
+            <h3 class="font-heading text-xl sm:text-2xl font-normal text-primary mb-2 sm:mb-3">
+              The Affordable Luxury Guarantee
+            </h3>
+            <p class="text-sm sm:text-base text-muted-text font-light leading-relaxed">
+              By maintaining direct artisanal atelier relationships and introducing our specialized Outlet Collections, we democratize elite fashion without compromise.
+            </p>
           </div>
 
-          <div class="pt-2 flex flex-wrap gap-4 items-center">
-            <a href="#gallery">
-              <UiButton variant="luxury-gold" size="lg">
-                Explore The Collections
-              </UiButton>
-            </a>
-            <a href="#branches">
-              <UiButton variant="outline" size="lg">
-                Visit Our Showrooms
-              </UiButton>
+          <div class="pt-4 sm:pt-6 flex flex-wrap gap-6 sm:gap-8 items-center">
+            <a href="#gallery" class="group flex items-center gap-4 sm:gap-6 text-primary text-xs sm:text-sm font-heading font-semibold uppercase tracking-[0.2em]" data-cursor-text="Explore">
+              <span>Explore The Collections</span>
+              <span class="w-10 sm:w-12 h-[1px] bg-[#D4AF37] transform origin-left transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-150"></span>
             </a>
           </div>
         </div>
