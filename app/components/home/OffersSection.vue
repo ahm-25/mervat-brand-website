@@ -3,26 +3,26 @@ import { ref } from 'vue'
 
 const offers = [
   {
-    title: "Women's Fashion",
-    description: "Curated haute couture and elegant silhouettes tailored for the modern woman who values luxury craftsmanship and Parisian styling.",
+    title: "أزياء نسائية",
+    description: "مجموعة مختارة بعناية من الملابس الأنيقة المصممة للمرأة العصرية، تقدم أزياء راقية بأسعار أوتليت مذهلة.",
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
     number: '01'
   },
   {
-    title: "Fine Accessories",
-    description: "Bespoke jewelry and fine accessories to complete your look, crafted with exquisite attention to detail.",
+    title: "إكسسوارات راقية",
+    description: "مجموعة مذهلة من الإكسسوارات لتكملة إطلالتك، مصممة لتضيف اللمسة النهائية المثالية لأي زي.",
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop',
     number: '02'
   },
   {
-    title: "Luxury Handbags",
-    description: "Handcrafted leather handbags featuring our signature 24k gold-plated accents for timeless day-to-evening versatility.",
+    title: "حقائب فاخرة",
+    description: "تشكيلة متميزة من الحقائب الأنيقة، تجمع بين التصميم الراقي والعملية اليومية.",
     image: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1200&auto=format&fit=crop',
     number: '03'
   },
   {
-    title: "Premium Beauty",
-    description: "Luminous cosmetic collections infused with crushed pearl and rose essence for a radiant, sophisticated glow.",
+    title: "مكياج وعناية",
+    description: "اكتشفي مجموعتنا الرائعة من مستحضرات التجميل الأساسية لتمنحك إشراقة متألقة وراقية كل يوم.",
     image: 'https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=1200&auto=format&fit=crop',
     number: '04'
   }
@@ -39,14 +39,14 @@ const activeIndex = ref(0)
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-24">
         <div class="space-y-4">
           <span class="text-xs font-body uppercase tracking-[0.4em] text-[#B59021] font-semibold block">
-            The Collection
+            التشكيلة
           </span>
           <h2 class="font-heading text-5xl sm:text-6xl lg:text-7xl font-medium text-primary tracking-tight leading-none">
-            What We Offer
+            ما نقدمه لكِ
           </h2>
         </div>
         <p class="text-muted-text text-sm sm:text-base max-w-sm font-light leading-relaxed pb-2">
-          Discover a world of uncompromised luxury. From Parisian-inspired silhouettes to luminous beauty essentials, curated to elevate your elegance.
+          اكتشفي عالمًا من الفخامة بأسعار مناسبة. من الملابس الأنيقة إلى أدوات التجميل الرائعة، لدينا كل ما تحتاجينه في مكان واحد.
         </p>
       </div>
 
@@ -58,7 +58,7 @@ const activeIndex = ref(0)
           class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex-1 border border-muted-border/50"
           :class="activeIndex === idx ? 'lg:flex-[3.5] flex-[3] shadow-2xl' : 'lg:flex-[0.6] flex-1 hover:flex-[0.8]'"
           @mouseenter="activeIndex = idx"
-          data-cursor-text="Explore"
+          data-cursor-text="تصفح"
         >
           <!-- Background Image -->
           <img 
@@ -82,11 +82,11 @@ const activeIndex = ref(0)
             <!-- Text & Titles -->
             <div 
               class="transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform"
-              :class="activeIndex === idx ? 'translate-y-0' : 'translate-y-8 lg:translate-y-0 lg:absolute lg:bottom-10 lg:left-10 lg:-rotate-90 lg:origin-bottom-left'"
+              :class="activeIndex === idx ? 'translate-y-0' : 'translate-y-8 lg:translate-y-0 lg:absolute lg:bottom-10 lg:start-6'"
             >
               <h3 
                 class="font-heading text-2xl sm:text-3xl lg:text-5xl font-medium text-white mb-2 sm:mb-4 whitespace-nowrap drop-shadow-lg transition-all duration-[1200ms]"
-                :class="activeIndex === idx ? 'tracking-normal' : 'lg:tracking-widest'"
+                :class="activeIndex === idx ? 'tracking-normal' : 'lg:tracking-widest lg:[writing-mode:vertical-rl] lg:rotate-180'"
               >
                 {{ offer.title }}
               </h3>
@@ -101,7 +101,7 @@ const activeIndex = ref(0)
                 </p>
                 <div class="mt-4 sm:mt-8">
                   <span class="inline-flex items-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
-                    View Collection &rarr;
+                    تصفح التشكيلة &larr;
                   </span>
                 </div>
               </div>

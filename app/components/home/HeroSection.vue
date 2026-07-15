@@ -47,7 +47,7 @@ const scrollToNext = () => {
           class="block text-[10px] sm:text-xs font-body font-bold tracking-[0.4em] uppercase text-white/90 transform transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-300"
           :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
         >
-          Paris &bull; Beirut &bull; Cairo
+          شرم الشيخ &bull; القاهرة
         </span>
       </div>
 
@@ -58,7 +58,7 @@ const scrollToNext = () => {
             class="block transform transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-500"
             :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
           >
-            Mervat
+            2M
           </span>
         </div>
         <div class="overflow-hidden flex items-center gap-4 lg:gap-8 mt-2">
@@ -66,13 +66,13 @@ const scrollToNext = () => {
             class="block italic font-light text-[#D4AF37] transform transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-700 drop-shadow-xl"
             :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
           >
-            Maison
+            براند
           </span>
           <span 
             class="block transform transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-900"
             :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
           >
-            Brand
+            أوتليت
           </span>
         </div>
       </h1>
@@ -83,7 +83,7 @@ const scrollToNext = () => {
           class="font-body text-sm sm:text-base text-white/90 font-light leading-relaxed transform transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] delay-[1100ms] drop-shadow-md"
           :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
         >
-          The premier luxury destination crafted for women who celebrate sophisticated elegance, haute couture, and bespoke accessories.
+          أكبر تشكيلة من الملابس والمكياج والإكسسوارات العصرية في مكان واحد.
         </p>
       </div>
 
@@ -98,7 +98,7 @@ const scrollToNext = () => {
             data-cursor-text="Explore"
             class="inline-flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 rounded-full border border-white/30 text-white hover:bg-white hover:text-primary transition-colors duration-500 font-heading text-sm sm:text-base uppercase tracking-widest"
           >
-            Explore
+            تصفح
           </a>
         </div>
       </div>
@@ -106,12 +106,12 @@ const scrollToNext = () => {
     </div>
 
     <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4 cursor-pointer group" @click="scrollToNext" data-cursor-text="Scroll">
+    <div class="absolute bottom-8 start-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4 cursor-pointer group" @click="scrollToNext" data-cursor-text="تمرير">
       <div class="w-[1px] h-16 bg-white/20 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-white transform -translate-y-full animate-[scroll-down_2s_ease-in-out_infinite]" />
+        <div class="absolute top-0 start-0 w-full h-full bg-white transform -translate-y-full animate-[scroll-down_2s_ease-in-out_infinite]" />
       </div>
       <span class="font-body text-[9px] uppercase tracking-[0.4em] text-white/50 group-hover:text-white transition-colors">
-        Scroll
+        تمرير
       </span>
     </div>
   </section>

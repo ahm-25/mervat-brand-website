@@ -23,7 +23,7 @@ import {
         <span>&mdash;</span>
         <span>Let's Talk</span>
         <span>&mdash;</span>
-        <span>Mervat Maison</span>
+        <span>2M Brand Outlet</span>
         <span>&mdash;</span>
       </div>
       <div class="animate-[marquee_30s_linear_infinite] flex items-center gap-12 font-heading text-7xl sm:text-9xl md:text-[12rem] lg:text-[16rem] uppercase font-normal text-primary tracking-tighter opacity-5 absolute top-4 left-full">
@@ -33,7 +33,7 @@ import {
         <span>&mdash;</span>
         <span>Let's Talk</span>
         <span>&mdash;</span>
-        <span>Mervat Maison</span>
+        <span>2M Brand Outlet</span>
         <span>&mdash;</span>
       </div>
     </div>
@@ -72,22 +72,22 @@ import {
             <span class="text-[10px] font-mono text-[#D4AF37] tracking-widest block border-b border-muted-border pb-4">SOCIAL</span>
             <ul class="space-y-4">
               <li>
-                <a href="#" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
+                <a href="https://www.instagram.com/2m_genena_city" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
                   <span class="transform group-hover:translate-x-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Instagram</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
+                <a href="https://www.facebook.com/2mBrands" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
                   <span class="transform group-hover:translate-x-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Facebook</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
+                <a href="https://www.tiktok.com/@2m_ginina_ciry" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
                   <span class="transform group-hover:translate-x-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">TikTok</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Chat">
+                <a href="https://chat.whatsapp.com/KmONCWE5f4GKzyJoAHGt8z" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Chat">
                   <span class="transform group-hover:translate-x-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:text-[#25D366]">WhatsApp</span>
                 </a>
               </li>

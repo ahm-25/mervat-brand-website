@@ -5,11 +5,11 @@ const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Collection', href: '#offers' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Branches', href: '#branches' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'الرئيسية', href: '#home' },
+  { label: 'التشكيلة', href: '#offers' },
+  { label: 'المعرض', href: '#gallery' },
+  { label: 'الفروع', href: '#branches' },
+  { label: 'تواصل معنا', href: '#contact' }
 ]
 
 const handleScroll = () => {
@@ -38,7 +38,7 @@ const toggleMobileMenu = () => {
 
 <template>
   <div 
-    class="fixed top-0 left-0 w-full z-50 flex justify-center px-4 sm:px-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
+    class="fixed top-0 start-0 w-full z-50 flex justify-center px-4 sm:px-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
     :class="isScrolled ? 'pt-4' : 'pt-6'"
   >
     <header
@@ -54,14 +54,14 @@ const toggleMobileMenu = () => {
         data-cursor-text="Home"
       >
         <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary flex items-center justify-center text-[#D4AF37] font-heading font-semibold text-lg tracking-tighter shadow-sm transition-transform duration-500 group-hover:scale-105">
-          M
+          2M
         </div>
         <div class="hidden sm:flex flex-col">
           <span class="font-heading text-lg font-medium tracking-tight leading-none text-primary transition-colors duration-300">
-            MERVAT
+            2M
           </span>
           <span class="text-[8px] uppercase tracking-[0.3em] text-[#B59021] font-semibold mt-0.5">
-            Maison
+            براند أوتليت
           </span>
         </div>
       </a>
@@ -76,15 +76,15 @@ const toggleMobileMenu = () => {
           data-cursor-text="Go"
         >
           {{ link.label }}
-          <span class="absolute inset-x-0 bottom-0 h-[1px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-left" />
+          <span class="absolute inset-x-0 bottom-0 h-[1px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-start" />
         </a>
       </nav>
 
       <!-- Desktop Action CTA -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="#gallery" data-cursor-text="View">
+        <a href="#gallery" data-cursor-text="تصفح">
           <span class="px-5 py-2.5 rounded-full bg-primary text-white text-[9px] font-body font-bold uppercase tracking-[0.25em] hover:bg-[#B59021] hover:shadow-luxury transition-all duration-500">
-            Explore
+            تصفح
           </span>
         </a>
       </div>
@@ -116,7 +116,7 @@ const toggleMobileMenu = () => {
     >
       <div
         v-if="isMobileMenuOpen"
-        class="md:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-2xl border border-white/40 shadow-2xl rounded-2xl py-6 px-6 pointer-events-auto"
+        class="md:hidden absolute top-full start-4 end-4 mt-2 bg-white/95 backdrop-blur-2xl border border-white/40 shadow-2xl rounded-2xl py-6 px-6 pointer-events-auto"
       >
         <nav class="flex flex-col space-y-2">
           <a
@@ -130,7 +130,7 @@ const toggleMobileMenu = () => {
           </a>
           <div class="pt-6 flex flex-col gap-3">
             <a href="#gallery" @click="isMobileMenuOpen = false" class="w-full text-center px-5 py-3 rounded-full bg-primary text-white text-[10px] font-body font-bold uppercase tracking-[0.25em] hover:bg-[#B59021] transition-colors">
-              Explore Collection
+              تصفح التشكيلة
             </a>
           </div>
         </nav>

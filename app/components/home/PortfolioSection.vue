@@ -3,86 +3,86 @@ import { ref, computed } from 'vue'
 import { Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 const categories = [
-  'All',
-  'Clothing',
-  'Accessories',
-  'Bags',
-  'Makeup',
-  'Store',
-  'Customer Moments'
+  'الكل',
+  'ملابس',
+  'إكسسوارات',
+  'حقائب',
+  'مكياج',
+  'المتجر',
+  'لحظات العملاء'
 ]
 
-const activeCategory = ref('All')
+const activeCategory = ref('الكل')
 
 // Sample high-quality images for a premium luxury look (Zara/Dior aesthetic)
 const portfolioItems = ref([
   {
     id: 1,
-    category: 'Clothing',
-    title: 'Haute Couture Spring Collection',
+    category: 'ملابس',
+    title: 'مجموعة هوت كوتور للربيع',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[3/4]'
   },
   {
     id: 2,
-    category: 'Bags',
-    title: 'Aura Leather Handbag',
+    category: 'حقائب',
+    title: 'حقيبة يد جلدية فاخرة',
     image: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   },
   {
     id: 3,
-    category: 'Accessories',
-    title: 'Gold Plated Minimalist Watch',
+    category: 'إكسسوارات',
+    title: 'ساعة مطلية بالذهب',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[4/5]'
   },
   {
     id: 4,
-    category: 'Clothing',
-    title: 'Silk Evening Gown',
+    category: 'ملابس',
+    title: 'فستان سهرة حريري',
     image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[2/3]'
   },
   {
     id: 5,
-    category: 'Makeup',
-    title: 'Luminous Pearl Collection',
+    category: 'مكياج',
+    title: 'مجموعة اللؤلؤ المضيء',
     image: 'https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   },
   {
     id: 6,
-    category: 'Store',
-    title: 'Paris Flagship Boutique',
+    category: 'المتجر',
+    title: 'فرعنا الرئيسي المستوحى من باريس',
     image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-video'
   },
   {
     id: 7,
-    category: 'Customer Moments',
-    title: 'VIP Exclusive Preview',
+    category: 'لحظات العملاء',
+    title: 'معاينة حصرية لكبار الشخصيات',
     image: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[4/5]'
   },
   {
     id: 8,
-    category: 'Bags',
-    title: 'Midnight Obsidian Clutch',
+    category: 'حقائب',
+    title: 'حقيبة سهرة بلون منتصف الليل',
     image: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[3/4]'
   },
   {
     id: 9,
-    category: 'Accessories',
-    title: 'Diamond Encrusted Bracelet',
+    category: 'إكسسوارات',
+    title: 'سوار مرصع بالألماس',
     image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   }
 ])
 
 const filteredItems = computed(() => {
-  if (activeCategory.value === 'All') {
+  if (activeCategory.value === 'الكل') {
     return portfolioItems.value
   }
   return portfolioItems.value.filter(item => item.category === activeCategory.value)
@@ -124,13 +124,13 @@ const prevImage = () => {
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-6">
         <span class="text-xs font-body uppercase tracking-[0.3em] text-[#B59021] font-semibold block">
-          Editorial & Lookbook
+          المجموعات والمعرض
         </span>
         <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-medium text-primary tracking-tight">
-          The Gallery
+          مجموعاتنا
         </h2>
         <p class="text-muted-text text-base leading-relaxed font-light mt-4 max-w-xl mx-auto">
-          Explore our visual narrative. A curated collection of our finest pieces, architectural spaces, and the elegant women who bring them to life.
+          استكشفي مجموعاتنا المختارة من أوسع تشكيلات الإكسسوارات، والملابس، والمكياج، لتعيشي تجربة التسوق الراقية التي نقدمها لكِ.
         </p>
       </div>
 
@@ -153,15 +153,14 @@ const prevImage = () => {
 
       <!-- Masonry Grid with CSS Columns -->
       <!-- We use transition-group for elegant filtering animations -->
-      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-        <TransitionGroup name="staggered-fade" mode="out-in">
-          <div
-            v-for="(item, index) in filteredItems"
-            :key="item.id"
-            class="break-inside-avoid group relative rounded-xl overflow-hidden cursor-pointer shadow-soft hover:shadow-luxury transform-gpu transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 mb-6"
-            @click="openLightbox(index)"
-          >
-            <!-- Image Wrapper for Zoom -->
+      <TransitionGroup name="staggered-fade" tag="div" class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div
+          v-for="(item, index) in filteredItems"
+          :key="item.id"
+          class="break-inside-avoid group relative rounded-xl overflow-hidden cursor-pointer shadow-soft hover:shadow-luxury transform-gpu transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 mb-6"
+          @click="openLightbox(index)"
+        >
+          <!-- Image Wrapper for Zoom -->
             <div class="relative w-full h-full overflow-hidden bg-secondary">
               <img
                 :src="item.image"
@@ -188,7 +187,6 @@ const prevImage = () => {
             </div>
           </div>
         </TransitionGroup>
-      </div>
 
     </div>
 
@@ -197,16 +195,17 @@ const prevImage = () => {
       <div v-if="lightboxOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-xl">
         
         <!-- Controls -->
-        <button @click="closeLightbox" class="absolute top-6 right-6 p-3 rounded-full bg-primary/5 hover:bg-primary/10 text-primary transition-colors z-50">
+        <button @click="closeLightbox" class="absolute top-6 end-6 p-3 rounded-full bg-primary/5 hover:bg-primary/10 text-primary transition-colors z-50">
           <X class="w-6 h-6" />
         </button>
 
-        <button @click.stop="prevImage" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
-          <ChevronLeft class="w-6 h-6" />
+        <!-- Right arrow acts as next, left as prev. Let's keep them physical right/left or switch depending on RTL. -->
+        <button @click.stop="nextImage" class="absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
+          <ChevronRight class="w-6 h-6" transform="scale(-1, 1)" />
         </button>
 
-        <button @click.stop="nextImage" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
-          <ChevronRight class="w-6 h-6" />
+        <button @click.stop="prevImage" class="absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
+          <ChevronLeft class="w-6 h-6" transform="scale(-1, 1)" />
         </button>
 
         <!-- Main Image -->

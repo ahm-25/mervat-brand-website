@@ -5,22 +5,22 @@ const branches = [
   {
     id: 1,
     city: 'Sharm El Sheikh',
-    name: 'Hay El Nour',
-    address: 'Main Square, Next to Royal Hotel',
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop'
+    name: 'El Genena',
+    address: 'El Genena City Mall',
+    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=1200&auto=format&fit=crop'
   },
   {
     id: 2,
     city: 'Sharm El Sheikh',
-    name: 'El Genena',
-    address: 'El Genena City Mall, Zone A',
-    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=1200&auto=format&fit=crop'
+    name: 'Hay El Nour',
+    address: 'Hay El Nour District',
+    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop'
   },
   {
     id: 3,
     city: 'Cairo',
-    name: 'New Cairo',
-    address: '5th Settlement, Downtown Mall',
+    name: 'Cairo Branch',
+    address: 'Cairo, Egypt',
     image: 'https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=1200&auto=format&fit=crop'
   }
 ]

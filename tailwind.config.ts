@@ -81,9 +81,9 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"Plus Jakarta Sans"', '"Outfit"', 'system-ui', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', '"Outfit"', 'system-ui', 'sans-serif']
+        heading: ['"Amiri"', 'serif'],
+        sans: ['"Tajawal"', 'system-ui', 'sans-serif'],
+        body: ['"Tajawal"', 'system-ui', 'sans-serif']
       },
       borderRadius: {
         none: '0px',

@@ -3,49 +3,49 @@ import { ref } from 'vue'
 import { useAnimatedCounter } from '~/composables/useAnimatedCounter'
 
 // Animated Counters setup
-const counterBranches = useAnimatedCounter(2, 1800, '', '')
+const counterBranches = useAnimatedCounter(3, 1800, '', '')
 const counterClients = useAnimatedCounter(15000, 2200, '', '+')
 const counterBrands = useAnimatedCounter(50, 1800, '', '+')
 const counterCommitment = useAnimatedCounter(100, 1500, '', '%')
 
 const specializations = [
   {
-    title: "Women's Fashion",
-    subtitle: "Haute Couture & Ready-to-Wear",
-    description: "Refined silhouettes, architectural evening gowns, and everyday luxury staples tailored from exquisite European silks and velvets.",
-    badge: "Haute Couture",
+    title: "أزياء نسائية",
+    subtitle: "تصاميم راقية وأزياء جاهزة",
+    description: "قصات أنيقة وفساتين سهرة معتمدة على أرقى الأقمشة الحريرية والمخملية لتناسب إطلالتك اليومية والفاخرة.",
+    badge: "هوت كوتور",
     badgeVariant: "dark" as const,
     icon: "✦"
   },
   {
-    title: "Handcrafted Handbags",
-    subtitle: "Supple Italian Leather & Silk",
-    description: "Signature totes, evening clutches, and structured top-handles featuring 24k gold-plated hardware and meticulous hand-stitching.",
-    badge: "Signature",
+    title: "حقائب فاخرة",
+    subtitle: "جلود إيطالية وحرير طبيعي",
+    description: "حقائب يد وحقائب سهرة مميزة مع إكسسوارات مطلية بالذهب عيار 24 وتطريز يدوي دقيق.",
+    badge: "تصميم حصري",
     badgeVariant: "gold" as const,
     icon: "💼"
   },
   {
-    title: "Bespoke Accessories",
-    subtitle: "Jewelry, Belts & Silk Scarves",
-    description: "The finishing touches of feminine power — handcrafted statement belts, gold-threaded scarves, and artisanal jewelry pieces.",
-    badge: "Artisanal",
+    title: "إكسسوارات راقية",
+    subtitle: "مجوهرات، أحزمة، وأوشحة",
+    description: "اللمسة الأخيرة لقوتك وأنوثتك — أحزمة مصنوعة يدوياً، أوشحة بخيوط ذهبية، وقطع مجوهرات فريدة.",
+    badge: "صناعة يدوية",
     badgeVariant: "cream" as const,
     icon: "👑"
   },
   {
-    title: "Luxury Makeup & Beauty",
-    subtitle: "Luminous Compacts & Lip Palettes",
-    description: "Formulated with crushed pearl and nourishing rose essences, housed in ultra-luxurious gold compacts designed to be treasured.",
-    badge: "Luminous",
+    title: "مكياج وعناية",
+    subtitle: "ألوان مشرقة ولمسات ساحرة",
+    description: "تركيبات فاخرة غنية بخلاصة اللؤلؤ والورد، محفوظة في عبوات ذهبية أنيقة لتعكس جمالك الداخلي.",
+    badge: "إشراقة",
     badgeVariant: "glass" as const,
     icon: "✨"
   },
   {
-    title: "Premium Outlet Brands",
-    subtitle: "Curated Designer Discoveries",
-    description: "Making high fashion accessible. Explore authentic past-season collections from premier global fashion houses at up to 50% off.",
-    badge: "Affordable Luxury",
+    title: "ماركات أوتليت",
+    subtitle: "اكتشافات لأرقى المصممين",
+    description: "نجعل الموضة الراقية في متناول الجميع. تصفحي مجموعات المواسم السابقة لأشهر دور الأزياء بخصومات تصل إلى 50%.",
+    badge: "فخامة بأسعار مناسبة",
     badgeVariant: "outlet" as const,
     icon: "🏷️"
   }
@@ -54,27 +54,27 @@ const specializations = [
 const timelineEvents = [
   {
     year: "2018",
-    title: "The Spark of Elegance",
-    location: "Paris & Cairo Inspiration",
-    description: "Founded by Mervat with a singular vision: creating an intimate sanctuary where high-fashion craftsmanship meets modern feminine grace."
+    title: "شرارة الأناقة",
+    location: "وحي من باريس والقاهرة",
+    description: "تأسست تو إم براند برؤية واحدة: خلق ملاذ حميمي يجمع بين الحرفية العالية والأناقة النسائية العصرية."
   },
   {
     year: "2021",
-    title: "Cairo Flagship Showroom",
-    location: "New Cairo & Galleria District",
-    description: "Expanded our offerings into complete women's ready-to-wear collections and opened our landmark Cairo showroom to VIP clientele."
+    title: "الفرع الرئيسي بالقاهرة",
+    location: "التجمع الخامس",
+    description: "وسعنا عروضنا لتشمل مجموعات كاملة من الأزياء الجاهزة وافتتحنا فرعنا الرئيسي في القاهرة لاستقبال عملائنا المميزين."
   },
   {
     year: "2024",
-    title: "Sharm El Sheikh & Beauty",
-    location: "Red Sea Luxury Promenade",
-    description: "Inaugurated our second premier boutique in resort-haven Sharm El Sheikh alongside the debut of our Luminous Makeup collection."
+    title: "شرم الشيخ والجمال",
+    location: "عروس البحر الأحمر",
+    description: "افتتحنا فرعنا الثاني في الوجهة السياحية شرم الشيخ بالتزامن مع إطلاق تشكيلة المكياج المشرق."
   },
   {
     year: "2026",
-    title: "The Affordable Luxury Era",
-    location: "Nationwide & Online",
-    description: "Revolutionizing Egyptian retail by launching our Premium Outlet concept — bringing world-class luxury closer to every woman without compromise."
+    title: "عصر الفخامة بأسعار في المتناول",
+    location: "في جميع الفروع وأونلاين",
+    description: "أحدثنا ثورة في تجارة التجزئة بإطلاق مفهوم 'الأوتليت' الفاخر، لنجلب أرقى صيحات الموضة لكل امرأة دون مساومة على الجودة."
   }
 ]
 </script>
@@ -84,8 +84,8 @@ const timelineEvents = [
     
     <!-- Ambient Background Decorative Glows -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-      <div class="absolute top-1/3 -left-32 w-[28rem] h-[28rem] rounded-full bg-accent/10 blur-3xl" />
-      <div class="absolute bottom-1/4 -right-32 w-[32rem] h-[32rem] rounded-full bg-secondary blur-3xl" />
+      <div class="absolute top-1/3 -start-32 w-[28rem] h-[28rem] rounded-full bg-accent/10 blur-3xl" />
+      <div class="absolute bottom-1/4 -end-32 w-[32rem] h-[32rem] rounded-full bg-secondary blur-3xl" />
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 lg:space-y-32">
@@ -107,17 +107,17 @@ const timelineEvents = [
             </div>
 
             <!-- Overlapping Minimalist Badge -->
-            <div class="absolute -left-2 sm:-left-8 top-16 sm:top-24 bg-white/95 backdrop-blur-xl p-6 sm:p-8 max-w-[240px] sm:max-w-[280px] shadow-2xl border-l-2 border-[#D4AF37] transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-4 z-30">
+            <div class="absolute -start-2 sm:-start-8 top-16 sm:top-24 bg-white/95 backdrop-blur-xl p-6 sm:p-8 max-w-[240px] sm:max-w-[280px] shadow-2xl border-s-2 border-[#D4AF37] transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-4 z-30">
               <p class="font-heading italic text-lg sm:text-xl text-primary leading-snug font-light">
-                “True luxury is where uncompromising craftsmanship meets everyday joy.”
+                "الفخامة الحقيقية هي عندما تلتقي الجودة العالية ببهجة كل يوم."
               </p>
               <span class="block mt-6 font-body text-[9px] font-bold text-[#B59021] uppercase tracking-[0.3em]">
-                Mervat &mdash; Founder
+                2M Brand
               </span>
             </div>
             
             <!-- Floating Secondary Image -->
-            <div class="absolute -bottom-8 sm:-bottom-12 -right-2 sm:-right-8 w-3/5 aspect-[4/5] overflow-hidden shadow-2xl bg-white border border-white/50 transform transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-6 z-20 rounded-sm">
+            <div class="absolute -bottom-8 sm:-bottom-12 -end-2 sm:-end-8 w-3/5 aspect-[4/5] overflow-hidden shadow-2xl bg-white border border-white/50 transform transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-6 z-20 rounded-sm">
               <img
                 src="/images/luxury_handbag.png"
                 alt="Handcrafted Italian Leather Handbag"
@@ -128,40 +128,40 @@ const timelineEvents = [
         </div>
 
         <!-- Right Column: Editorial Narrative -->
-        <div class="w-full lg:w-1/2 space-y-10 sm:space-y-12 lg:pl-8 mt-12 lg:mt-0">
+        <div class="w-full lg:w-1/2 space-y-10 sm:space-y-12 lg:pe-8 mt-12 lg:mt-0">
           <div class="space-y-4 sm:space-y-6">
             <span class="text-[10px] font-body uppercase tracking-[0.4em] text-[#B59021] font-semibold block">
-              Our Heritage & Vision
+              تراثنا ورؤيتنا
             </span>
             <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-primary leading-[1.1]">
-              The Story of <br />
-              <span class="italic font-light text-gradient-gold">Mervat Brand.</span>
+              قصة <br />
+              <span class="italic font-light text-gradient-gold">تو إم براند أوتليت.</span>
             </h2>
           </div>
 
           <div class="space-y-5 sm:space-y-6 font-body text-base sm:text-lg text-muted-text font-light leading-relaxed max-w-xl">
             <p>
-              Founded from a deep reverence for sophisticated elegance and feminine poise, <strong class="font-normal text-primary">Mervat Brand</strong> began as a dream to redefine the modern boutique experience across Egypt and the Middle East.
+              تأسست <strong class="font-normal text-primary">تو إم براند أوتليت</strong> من منطلق الاحترام العميق للأناقة الراقية والأنوثة الساحرة، حيث بدأنا كحلم لإعادة تعريف تجربة التسوق في مصر والشرق الأوسط.
             </p>
             <p>
-              We believe that every woman deserves to feel empowered and radiantly confident. That is why our houses bridge the worlds of bespoke high fashion with <strong class="font-normal text-primary">Affordable Luxury</strong>. Whether selecting an architectural evening gown, a supple calf-leather handbag, or our finely milled makeup palettes, our promise remains unwavering.
+              نؤمن بأن كل امرأة تستحق أن تشعر بالقوة والثقة والإشراق. ولهذا السبب، يجمع متجرنا بين عالم الأزياء الراقية و<strong class="font-normal text-primary">الفخامة بأسعار معقولة</strong>. سواء كنتِ تبحثين عن فستان سهرة خلاب، حقيبة يد جلدية أصلية، أو مستحضرات تجميل فاخرة، فإن وعدنا لكِ يظل ثابتاً.
             </p>
           </div>
 
           <!-- Refined Affordable Luxury Callout -->
-          <div class="pl-6 sm:pl-8 border-l border-[#D4AF37]/40 max-w-lg">
+          <div class="pe-6 sm:pe-8 border-s border-[#D4AF37]/40 max-w-lg">
             <h3 class="font-heading text-xl sm:text-2xl font-normal text-primary mb-2 sm:mb-3">
-              The Affordable Luxury Guarantee
+              ضمان الفخامة الميسرة
             </h3>
             <p class="text-sm sm:text-base text-muted-text font-light leading-relaxed">
-              By maintaining direct artisanal atelier relationships and introducing our specialized Outlet Collections, we democratize elite fashion without compromise.
+              من خلال الحفاظ على علاقات مباشرة مع أرقى الورش العالمية وتقديم مجموعات الأوتليت المتخصصة، نتيح لكِ اقتناء أرقى صيحات الموضة دون أي تنازل عن الجودة.
             </p>
           </div>
 
           <div class="pt-4 sm:pt-6 flex flex-wrap gap-6 sm:gap-8 items-center">
-            <a href="#gallery" class="group flex items-center gap-4 sm:gap-6 text-primary text-xs sm:text-sm font-heading font-semibold uppercase tracking-[0.2em]" data-cursor-text="Explore">
-              <span>Explore The Collections</span>
-              <span class="w-10 sm:w-12 h-[1px] bg-[#D4AF37] transform origin-left transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-150"></span>
+            <a href="#gallery" class="group flex items-center gap-4 sm:gap-6 text-primary text-xs sm:text-sm font-heading font-semibold uppercase tracking-[0.2em]" data-cursor-text="تصفح">
+              <span>تصفح المجموعات</span>
+              <span class="w-10 sm:w-12 h-[1px] bg-[#D4AF37] transform origin-start transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-150"></span>
             </a>
           </div>
         </div>
@@ -175,41 +175,41 @@ const timelineEvents = [
 
         <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 text-center">
           <!-- Counter 1: Branches -->
-          <div :ref="el => { if (el) counterBranches.elementRef.value = el as HTMLElement }" class="space-y-2 border-r border-white/10 last:border-0">
+          <div :ref="el => { if (el) counterBranches.elementRef.value = el as HTMLElement }" class="space-y-2 border-e border-white/10 last:border-0">
             <span class="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-accent block tracking-tight">
               {{ counterBranches.formattedValue.value }}
             </span>
             <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-gray-300 font-medium block">
-              Flagship Showrooms
+              فروعنا
             </span>
             <span class="text-[11px] text-gray-400 font-light block">
-              Cairo & Sharm El Sheikh
+              القاهرة وشرم الشيخ
             </span>
           </div>
 
           <!-- Counter 2: Happy Clients -->
-          <div :ref="el => { if (el) counterClients.elementRef.value = el as HTMLElement }" class="space-y-2 border-r border-white/10 last:border-0">
+          <div :ref="el => { if (el) counterClients.elementRef.value = el as HTMLElement }" class="space-y-2 border-e border-white/10 last:border-0">
             <span class="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white block tracking-tight">
               {{ counterClients.formattedValue.value }}
             </span>
             <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-[#B59021] font-medium block">
-              Discerning Women
+              سيدة راقية
             </span>
             <span class="text-[11px] text-gray-400 font-light block">
-              VIP Members & Loyal Clients
+              عملاء مميزين وأعضاء VIP
             </span>
           </div>
 
           <!-- Counter 3: Brands & Collections -->
-          <div :ref="el => { if (el) counterBrands.elementRef.value = el as HTMLElement }" class="space-y-2 border-r border-white/10 last:border-0">
+          <div :ref="el => { if (el) counterBrands.elementRef.value = el as HTMLElement }" class="space-y-2 border-e border-white/10 last:border-0">
             <span class="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-accent block tracking-tight">
               {{ counterBrands.formattedValue.value }}
             </span>
             <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-gray-300 font-medium block">
-              Curated Brands
+              ماركات عالمية
             </span>
             <span class="text-[11px] text-gray-400 font-light block">
-              Haute Couture & Outlet Discoveries
+              أزياء راقية ومكتشفات أوتليت
             </span>
           </div>
 
@@ -219,10 +219,10 @@ const timelineEvents = [
               {{ counterCommitment.formattedValue.value }}
             </span>
             <span class="font-body text-xs sm:text-sm uppercase tracking-widest text-[#B59021] font-medium block">
-              Affordable Luxury
+              فخامة في المتناول
             </span>
             <span class="text-[11px] text-gray-400 font-light block">
-              Uncompromising Quality Commitment
+              التزام لا هوادة فيه بالجودة
             </span>
           </div>
         </div>
@@ -232,13 +232,13 @@ const timelineEvents = [
       <div class="space-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
           <span class="text-xs font-body uppercase tracking-[0.3em] text-[#B59021] font-semibold">
-            Bespoke Craftsmanship
+            حرفية لا مثيل لها
           </span>
           <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-primary">
-            Curated Worlds of Elegance
+            عوالم من الأناقة المختارة
           </h2>
           <p class="text-muted-text text-base font-light">
-            From the runway to everyday radiance, explore our five specialized pillars designed to elevate every aspect of the modern feminine wardrobe.
+            من منصات عروض الأزياء إلى إشراقتك اليومية، استكشفي ركائزنا الخمسة المصممة للارتقاء بكل تفاصيل خزانتك.
           </p>
         </div>
 
@@ -249,7 +249,7 @@ const timelineEvents = [
             :key="spec.title"
             class="group rounded-2xl bg-white border border-muted-border/90 p-8 shadow-soft hover:shadow-luxury transition-all duration-500 flex flex-col justify-between space-y-6 hover:-translate-y-1.5 relative overflow-hidden"
           >
-            <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full transition-transform duration-500 group-hover:scale-125 pointer-events-none" />
+            <div class="absolute top-0 end-0 w-32 h-32 bg-accent/5 rounded-es-full transition-transform duration-500 group-hover:scale-125 pointer-events-none" />
             
             <div class="space-y-4 relative z-10">
               <div class="flex items-center justify-between">
@@ -279,16 +279,16 @@ const timelineEvents = [
             </div>
           </div>
 
-          <!-- Bottom 2 Cards (Span 1.5 columns each on desktop if needed, or normal 2 across in 3-col grid) -->
+          <!-- Bottom 2 Cards -->
           <div
             v-for="spec in specializations.slice(3, 5)"
             :key="spec.title"
             :class="[
               'group rounded-2xl bg-white border border-muted-border/90 p-8 shadow-soft hover:shadow-luxury transition-all duration-500 flex flex-col justify-between space-y-6 hover:-translate-y-1.5 relative overflow-hidden',
-              spec.badge === 'Affordable Luxury' ? 'md:col-span-2 lg:col-span-2 border-[#D4AF37]/50 bg-gradient-to-br from-white via-[#FAF9F6] to-secondary/30' : ''
+              spec.badge === 'فخامة بأسعار مناسبة' ? 'md:col-span-2 lg:col-span-2 border-[#D4AF37]/50 bg-gradient-to-br from-white via-[#FAF9F6] to-secondary/30' : ''
             ]"
           >
-            <div class="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-bl-full transition-transform duration-500 group-hover:scale-125 pointer-events-none" />
+            <div class="absolute top-0 end-0 w-40 h-40 bg-accent/10 rounded-es-full transition-transform duration-500 group-hover:scale-125 pointer-events-none" />
             
             <div class="space-y-4 relative z-10">
               <div class="flex items-center justify-between">
@@ -324,19 +324,19 @@ const timelineEvents = [
       <div class="space-y-12 pt-8 border-t border-muted/80">
         <div class="text-center max-w-3xl mx-auto space-y-3">
           <span class="text-xs font-body uppercase tracking-[0.3em] text-[#B59021] font-semibold">
-            Chronicles of Grace
+            سجلات النجاح
           </span>
           <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-primary">
-            Our Journey & Milestones
+            رحلتنا وإنجازاتنا
           </h2>
           <p class="text-muted-text text-sm sm:text-base font-light">
-            From an intimate concept to a premier dual-city destination spanning Cairo and Sharm El Sheikh.
+            من فكرة ملهمة إلى وجهة بارزة تمتد عبر القاهرة وشرم الشيخ.
           </p>
         </div>
 
         <div class="relative">
           <!-- Connecting Line for Desktop -->
-          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent -translate-y-1/2 z-0" />
+          <div class="hidden lg:block absolute top-1/2 start-0 end-0 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent -translate-y-1/2 z-0" />
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             <div
@@ -374,17 +374,17 @@ const timelineEvents = [
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div class="space-y-3 max-w-2xl">
             <span class="text-xs font-body uppercase tracking-[0.3em] text-[#B59021] font-semibold">
-              Destinations in Egypt
+              وجهاتنا في مصر
             </span>
             <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-primary">
-              Our Flagship Showrooms
+              معارضنا الرئيسية
             </h2>
             <p class="text-muted-text text-base font-light">
-              Immerse yourself in personal styling sessions, bespoke tailoring, and exclusive outlet discoveries across two iconic Egyptian destinations.
+              انغمسي في جلسات تنسيق الأزياء الشخصية، الخياطة المخصصة، واكتشافات الأوتليت الحصرية عبر وجهتين أيقونيتين في مصر.
             </p>
           </div>
           <UiBadge variant="gold" size="lg" dot class="self-start md:self-auto">
-            Open Daily Across Both Cities
+            نستقبلكم يومياً في كلي المدينتين
           </UiBadge>
         </div>
 
@@ -395,10 +395,10 @@ const timelineEvents = [
               <div class="flex items-start justify-between">
                 <div>
                   <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block">
-                    Capital Showroom
+                    فرع العاصمة
                   </span>
                   <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1">
-                    Cairo Flagship Boutique
+                    فرع القاهرة
                   </h3>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-primary text-accent flex items-center justify-center font-heading font-bold text-xl shadow-sm">
@@ -407,24 +407,24 @@ const timelineEvents = [
               </div>
 
               <p class="text-muted-text text-base font-light leading-relaxed">
-                Located in the heart of New Cairo and Downtown Galleria. Designed for private styling consultations, haute couture fittings, and showcasing our complete women's fashion and leather handbag lines.
+                استمتعي بأرقى تشكيلات الإكسسوارات والمكياج والملابس في فرعنا بالقاهرة. اكتشفي تنوعاً واسعاً من الأزياء العصرية المصممة لتمنحك إطلالة استثنائية.
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 Location Address</span>
-                  <p class="text-primary font-medium">New Cairo • Galleria Avenue, Suite 101</p>
+                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 الموقع</span>
+                  <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع القاهرة</a>
                 </div>
                 <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 Showroom Hours</span>
-                  <p class="text-primary font-medium">Daily: 10:00 AM — 11:00 PM</p>
+                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 ساعات العمل</span>
+                  <p class="text-primary font-medium">يومياً: 10:00 ص — 11:00 م</p>
                 </div>
               </div>
             </div>
 
             <div class="bg-primary/95 text-white px-8 py-4 flex items-center justify-between border-t border-accent/20">
-              <span class="text-xs font-body uppercase tracking-widest text-gray-300">VIP Concierge & Styling</span>
-              <span class="text-accent font-heading font-semibold text-sm">Book Cairo Appointment →</span>
+              <span class="text-xs font-body uppercase tracking-widest text-gray-300">اكتشفي الأناقة</span>
+              <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-accent font-heading font-semibold text-sm">عرض الخريطة ←</a>
             </div>
           </div>
 
@@ -434,10 +434,10 @@ const timelineEvents = [
               <div class="flex items-start justify-between">
                 <div>
                   <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block">
-                    Red Sea Resort Lounge
+                    فروع البحر الأحمر
                   </span>
                   <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1">
-                    Sharm El Sheikh Showroom
+                    شرم الشيخ
                   </h3>
                 </div>
                 <div class="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-xl shadow-sm">
@@ -446,24 +446,24 @@ const timelineEvents = [
               </div>
 
               <p class="text-muted-text text-base font-light leading-relaxed">
-                Nestled along the prestigious Red Sea Luxury Promenade. Offering resort-ready couture, exclusive Luminous Makeup compacts, and our dedicated Premium Outlet lounge with up to 50% savings.
+                Visit us in Sharm El Sheikh to explore our two main branches. We offer the widest accessories and clothing selection, ensuring you find exactly what you need for shopping in one place.
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 Location Address</span>
-                  <p class="text-primary font-medium">Sharm El Sheikh • Luxury Promenade, Villa 4</p>
+                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 Branches</span>
+                  <p class="text-primary font-medium">Genena Branch<br/>Hay El Nour Branch</p>
                 </div>
                 <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 Showroom Hours</span>
+                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 Hours</span>
                   <p class="text-primary font-medium">Daily: 11:00 AM — Midnight</p>
                 </div>
               </div>
             </div>
 
             <div class="bg-primary/95 text-white px-8 py-4 flex items-center justify-between border-t border-accent/20">
-              <span class="text-xs font-body uppercase tracking-widest text-gray-300">Resort & Outlet Discoveries</span>
-              <span class="text-accent font-heading font-semibold text-sm">Explore Sharm Lounge →</span>
+              <span class="text-xs font-body uppercase tracking-widest text-gray-300">Discover Fashion</span>
+              <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-accent font-heading font-semibold text-sm">View Map →</a>
             </div>
           </div>
         </div>

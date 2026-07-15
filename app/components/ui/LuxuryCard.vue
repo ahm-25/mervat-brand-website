@@ -74,8 +74,8 @@ const handleQuickView = (e: Event) => {
         class="absolute inset-0 h-full w-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 cubic-bezier(0.16, 1, 0.3, 1)"
       />
 
-      <!-- Badges Stack -->
-      <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+      <!-- Top Left: Badges -->
+      <div class="absolute top-3 start-3 flex flex-col gap-1.5 z-10">
         <UiBadge
           v-if="isOutlet"
           variant="outlet"
@@ -95,17 +95,17 @@ const handleQuickView = (e: Event) => {
           variant="cream"
           size="sm"
         >
-          New
+          جديد
         </UiBadge>
       </div>
 
-      <!-- Wishlist / Favorite Button -->
-      <button
-        type="button"
-        class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full glass-effect flex items-center justify-center text-primary transition-all duration-300 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none"
+      <!-- Top Right: Favorite Action -->
+      <button 
+        v-if="showFavorite"
+        @click.stop="toggleFavorite"
+        class="absolute top-3 end-3 z-10 w-9 h-9 rounded-full glass-effect flex items-center justify-center text-primary transition-all duration-300 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none"
         :class="{ '!bg-accent !text-white !border-accent shadow-gold': isFavorited }"
         aria-label="Add to wishlist"
-        @click="toggleFavorite"
       >
         <svg
           class="w-4 h-4 transition-transform duration-300"
@@ -129,7 +129,7 @@ const handleQuickView = (e: Event) => {
           class="w-full py-2.5 px-4 rounded glass-card bg-white/90 text-primary text-xs font-body uppercase tracking-widest font-semibold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-colors duration-300"
           @click="handleQuickView"
         >
-          <span>Quick View</span>
+          <span>نظرة سريعة</span>
           <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
             <circle cx="12" cy="12" r="3" />
@@ -165,9 +165,9 @@ const handleQuickView = (e: Event) => {
           {{ typeof originalPrice === 'number' ? `$${originalPrice.toLocaleString()}` : originalPrice }}
         </span>
 
-        <span
-          v-if="originalPrice && typeof price === 'number' && typeof originalPrice === 'number'"
-          class="ml-auto text-[10px] font-bold text-[#B59021] bg-accent/15 px-1.5 py-0.5 rounded"
+        <span 
+          v-if="originalPrice && typeof price === 'number' && typeof originalPrice === 'number'" 
+          class="ms-auto text-[10px] font-bold text-[#B59021] bg-accent/15 px-1.5 py-0.5 rounded"
         >
           -{{ Math.round(((originalPrice - price) / originalPrice) * 100) }}%
         </span>
