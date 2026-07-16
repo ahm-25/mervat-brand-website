@@ -36,15 +36,16 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <header 
-    class="fixed top-0 inset-x-0 w-full z-50 transition-all duration-500 border-b pointer-events-auto"
-    :class="isScrolled 
-      ? 'bg-white/98 backdrop-blur-2xl border-black/10 shadow-[0_4px_30px_rgba(0,0,0,0.06)] py-3 sm:py-3.5' 
-      : 'bg-white/95 backdrop-blur-xl border-black/5 shadow-soft py-4 sm:py-5'"
+  <div 
+    class="fixed top-0 start-0 w-full z-50 flex justify-center px-4 sm:px-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
+    :class="isScrolled ? 'pt-4' : 'pt-6'"
   >
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-2 md:grid-cols-3 items-center w-full">
-      <!-- Right Column: Brand Logo -->
-      <div class="flex items-center justify-start">
+    <header
+      class="pointer-events-auto grid grid-cols-2 md:grid-cols-3 items-center w-full max-w-5xl rounded-full px-6 sm:px-8 py-2.5 sm:py-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border bg-white border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
+      :class="isScrolled ? 'shadow-luxury border-[#D4AF37]/30' : ''"
+    >
+      <!-- Column 1: Logo (Aligned to Right in RTL) -->
+      <div class="flex justify-start items-center">
         <a
           href="#home"
           class="flex items-center gap-3 group focus:outline-none"
@@ -58,29 +59,24 @@ const toggleMobileMenu = () => {
         </a>
       </div>
 
-      <!-- Center Column: Navigation Links (Precisely Centered) -->
-      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-11">
+      <!-- Column 2: Desktop Navigation Links (Dead Center) -->
+      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-12">
         <a
           v-for="link in navLinks"
           :key="link.label"
           :href="link.href"
-          class="relative font-body text-[15px] lg:text-base font-bold transition-colors duration-300 py-1 text-[#1a1a1a] hover:text-[#B59021] group tracking-wide"
+          class="relative font-body text-[15px] lg:text-base font-bold transition-colors duration-300 py-1 text-gray-800 hover:text-[#B59021] group tracking-wide whitespace-nowrap"
           data-cursor-text="Go"
         >
           {{ link.label }}
-          <span class="absolute inset-x-0 bottom-0 h-[2px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center" />
+          <span class="absolute inset-x-0 bottom-0 h-[2px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-start" />
         </a>
       </nav>
 
-      <!-- Left Column: Balanced Concierge Pill & Mobile Toggle -->
-      <div class="flex items-center justify-end gap-4">
-        <a
-          href="#contact"
-          class="hidden md:inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-black/[0.03] hover:bg-[#030303] text-[#1a1a1a] hover:text-[#D4AF37] border border-black/5 hover:border-[#030303] text-xs font-body font-bold transition-all duration-300 shadow-soft"
-        >
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>خدمة العملاء</span>
-        </a>
+      <!-- Column 3: Spacer / Mobile Menu Button (Aligned to Left in RTL) -->
+      <div class="flex justify-end items-center">
+        <!-- Desktop empty balancing space -->
+        <div class="hidden md:block w-1" />
 
         <!-- Mobile Menu Hamburger Button -->
         <button
@@ -97,7 +93,7 @@ const toggleMobileMenu = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </header>
 
     <!-- Mobile Drawer Menu -->
     <Transition
@@ -126,5 +122,5 @@ const toggleMobileMenu = () => {
         </nav>
       </div>
     </Transition>
-  </header>
+  </div>
 </template>
