@@ -199,13 +199,13 @@ const prevImage = () => {
           <X class="w-6 h-6" />
         </button>
 
-        <!-- Right arrow acts as next, left as prev. Let's keep them physical right/left or switch depending on RTL. -->
-        <button @click.stop="nextImage" class="absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
-          <ChevronRight class="w-6 h-6" transform="scale(-1, 1)" />
+        <!-- RTL: previous sits on the right pointing right, next sits on the left pointing left -->
+        <button @click.stop="prevImage" aria-label="السابق" class="absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
+          <ChevronRight class="w-6 h-6" />
         </button>
 
-        <button @click.stop="prevImage" class="absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
-          <ChevronLeft class="w-6 h-6" transform="scale(-1, 1)" />
+        <button @click.stop="nextImage" aria-label="التالي" class="absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 p-3 sm:p-4 rounded-full bg-white/80 hover:bg-white text-primary shadow-luxury transition-all z-50">
+          <ChevronLeft class="w-6 h-6" />
         </button>
 
         <!-- Main Image -->
