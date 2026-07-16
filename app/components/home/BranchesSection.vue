@@ -21,7 +21,7 @@ const branches = [
     city: 'Cairo',
     name: 'Cairo Branch',
     address: 'Cairo, Egypt',
-    image: 'https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=1200&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop'
   }
 ]
 

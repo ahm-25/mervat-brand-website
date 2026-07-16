@@ -31,7 +31,7 @@ const scrollToNext = () => {
       
       <!-- We use a high-res image acting as a video placeholder, with a slow scale effect -->
       <img
-        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2000&auto=format&fit=crop"
         alt="Luxury Fashion Campaign"
         class="w-full h-full object-cover object-top transform-gpu transition-all duration-[20000ms] ease-out"
         :class="isLoaded ? 'scale-105' : 'scale-125 blur-sm'"

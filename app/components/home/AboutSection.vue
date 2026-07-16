@@ -272,11 +272,6 @@ const timelineEvents = [
                 {{ spec.description }}
               </p>
             </div>
-
-            <div class="pt-4 border-t border-muted/80 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-[#B59021] transition-colors">
-              <span>Discover Collection</span>
-              <span class="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </div>
           </div>
 
           <!-- Bottom 2 Cards -->
@@ -310,11 +305,6 @@ const timelineEvents = [
               <p class="text-sm sm:text-base text-muted-text font-light leading-relaxed max-w-2xl">
                 {{ spec.description }}
               </p>
-            </div>
-
-            <div class="pt-4 border-t border-muted/80 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-primary group-hover:text-[#B59021] transition-colors">
-              <span>Discover Collection</span>
-              <span class="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
             </div>
           </div>
         </div>
@@ -410,21 +400,17 @@ const timelineEvents = [
                 استمتعي بأرقى تشكيلات الإكسسوارات والمكياج والملابس في فرعنا بالقاهرة. اكتشفي تنوعاً واسعاً من الأزياء العصرية المصممة لتمنحك إطلالة استثنائية.
               </p>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-muted-border">
+              <div class="pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
                   <span class="font-mono text-muted-text uppercase block font-semibold">📍 الموقع</span>
-                  <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع القاهرة</a>
-                </div>
-                <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 ساعات العمل</span>
-                  <p class="text-primary font-medium">يومياً: 10:00 ص — 11:00 م</p>
+                  <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع القاهرة</a>
                 </div>
               </div>
             </div>
 
             <div class="bg-primary/95 text-white px-8 py-4 flex items-center justify-between border-t border-accent/20">
               <span class="text-xs font-body uppercase tracking-widest text-gray-300">اكتشفي الأناقة</span>
-              <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-accent font-heading font-semibold text-sm">عرض الخريطة ←</a>
+              <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-accent font-heading font-semibold text-sm">عرض الخريطة ←</a>
             </div>
           </div>
 
@@ -446,24 +432,20 @@ const timelineEvents = [
               </div>
 
               <p class="text-muted-text text-base font-light leading-relaxed">
-                Visit us in Sharm El Sheikh to explore our two main branches. We offer the widest accessories and clothing selection, ensuring you find exactly what you need for shopping in one place.
+                زورينا في شرم الشيخ واكتشفي فرعينا الرئيسيين. نوفر لكِ أوسع تشكيلة من الإكسسوارات والملابس، لتجدي كل ما تحتاجينه في مكان واحد.
               </p>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-muted-border">
+              <div class="pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 Branches</span>
-                  <p class="text-primary font-medium">Genena Branch<br/>Hay El Nour Branch</p>
-                </div>
-                <div class="space-y-1 text-xs">
-                  <span class="font-mono text-muted-text uppercase block font-semibold">🕒 Hours</span>
-                  <p class="text-primary font-medium">Daily: 11:00 AM — Midnight</p>
+                  <span class="font-mono text-muted-text uppercase block font-semibold">📍 الفروع</span>
+                  <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع الجنينة<br/>فرع حي النور</a>
                 </div>
               </div>
             </div>
 
             <div class="bg-primary/95 text-white px-8 py-4 flex items-center justify-between border-t border-accent/20">
-              <span class="text-xs font-body uppercase tracking-widest text-gray-300">Discover Fashion</span>
-              <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-accent font-heading font-semibold text-sm">View Map →</a>
+              <span class="text-xs font-body uppercase tracking-widest text-gray-300">اكتشفي الأناقة</span>
+              <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-accent font-heading font-semibold text-sm">عرض الخريطة ←</a>
             </div>
           </div>
         </div>

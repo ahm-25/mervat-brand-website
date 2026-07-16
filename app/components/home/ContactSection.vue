@@ -9,6 +9,12 @@ import {
   Banknote,
   Smartphone
 } from 'lucide-vue-next'
+
+const phoneLines = [
+  { label: 'للاستفسار', number: '01229094258', call: true, whatsapp: true },
+  { label: 'للشكاوى — واتساب فقط', number: '01002294523', call: false, whatsapp: true },
+  { label: 'للطوارئ — مكالمات فقط', number: '01281061502', call: true, whatsapp: false }
+]
 </script>
 
 <template>
@@ -50,10 +56,36 @@ import {
             <a href="mailto:concierge@mervatbrand.com" class="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary hover:text-[#D4AF37] transition-colors duration-500 inline-block mb-4 leading-none" data-cursor-text="Email">
               concierge@<br />mervat.com
             </a>
-            <div class="mt-8">
-              <a href="tel:+201001234567" class="font-heading text-3xl sm:text-4xl text-primary/40 hover:text-primary transition-colors duration-500" data-cursor-text="Call">
-                +20 100 123 4567
-              </a>
+            <div class="mt-10 space-y-6">
+              <div v-for="line in phoneLines" :key="line.number" class="space-y-1.5">
+                <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#B59021] font-semibold block">
+                  {{ line.label }}
+                </span>
+                <div class="flex items-center gap-4 flex-wrap">
+                  <span class="font-heading text-2xl sm:text-3xl text-primary/70 tracking-wide" dir="ltr">
+                    {{ line.number }}
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <a
+                      v-if="line.call"
+                      :href="`tel:+2${line.number}`"
+                      class="flex items-center gap-1.5 text-xs font-body font-semibold text-primary/60 hover:text-primary border border-muted-border rounded-full px-3 py-1.5 transition-colors duration-300"
+                      data-cursor-text="Call"
+                    >
+                      <Phone class="w-3.5 h-3.5" /> اتصال
+                    </a>
+                    <a
+                      v-if="line.whatsapp"
+                      :href="`https://wa.me/2${line.number}`"
+                      target="_blank"
+                      class="flex items-center gap-1.5 text-xs font-body font-semibold text-primary/60 hover:text-[#25D366] border border-muted-border rounded-full px-3 py-1.5 transition-colors duration-300"
+                      data-cursor-text="Chat"
+                    >
+                      <MessageCircle class="w-3.5 h-3.5" /> واتساب
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           

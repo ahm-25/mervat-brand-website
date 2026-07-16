@@ -19,36 +19,36 @@ const portfolioItems = ref([
   {
     id: 1,
     category: 'ملابس',
-    title: 'مجموعة هوت كوتور للربيع',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
+    title: 'تشكيلة الربيع الجديدة',
+    image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[3/4]'
   },
   {
     id: 2,
     category: 'حقائب',
     title: 'حقيبة يد جلدية فاخرة',
-    image: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   },
   {
     id: 3,
     category: 'إكسسوارات',
-    title: 'ساعة مطلية بالذهب',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop',
+    title: 'ساعة كلاسيكية بسوار جلدي',
+    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[4/5]'
   },
   {
     id: 4,
     category: 'ملابس',
-    title: 'فستان سهرة حريري',
-    image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1200&auto=format&fit=crop',
+    title: 'فساتين وأزياء مختارة',
+    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[2/3]'
   },
   {
     id: 5,
     category: 'مكياج',
-    title: 'مجموعة اللؤلؤ المضيء',
-    image: 'https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=1200&auto=format&fit=crop',
+    title: 'مجموعة المكياج الأساسية',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   },
   {
@@ -61,22 +61,22 @@ const portfolioItems = ref([
   {
     id: 7,
     category: 'لحظات العملاء',
-    title: 'معاينة حصرية لكبار الشخصيات',
-    image: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?q=80&w=1200&auto=format&fit=crop',
+    title: 'تجربة تسوق مميزة',
+    image: 'https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[4/5]'
   },
   {
     id: 8,
     category: 'حقائب',
-    title: 'حقيبة سهرة بلون منتصف الليل',
+    title: 'حقيبة يد بنقشة زهرية',
     image: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-[3/4]'
   },
   {
     id: 9,
     category: 'إكسسوارات',
-    title: 'سوار مرصع بالألماس',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop',
+    title: 'تشكيلة الإكسسوارات المميزة',
+    image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop',
     aspectClass: 'aspect-square'
   }
 ])

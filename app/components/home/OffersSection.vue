@@ -5,25 +5,25 @@ const offers = [
   {
     title: "أزياء نسائية",
     description: "مجموعة مختارة بعناية من الملابس الأنيقة المصممة للمرأة العصرية، تقدم أزياء راقية بأسعار أوتليت مذهلة.",
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop',
     number: '01'
   },
   {
     title: "إكسسوارات راقية",
     description: "مجموعة مذهلة من الإكسسوارات لتكملة إطلالتك، مصممة لتضيف اللمسة النهائية المثالية لأي زي.",
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1200&auto=format&fit=crop',
     number: '02'
   },
   {
     title: "حقائب فاخرة",
     description: "تشكيلة متميزة من الحقائب الأنيقة، تجمع بين التصميم الراقي والعملية اليومية.",
-    image: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1200&auto=format&fit=crop',
     number: '03'
   },
   {
     title: "مكياج وعناية",
     description: "اكتشفي مجموعتنا الرائعة من مستحضرات التجميل الأساسية لتمنحك إشراقة متألقة وراقية كل يوم.",
-    image: 'https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop',
     number: '04'
   }
 ]
@@ -99,11 +99,6 @@ const activeIndex = ref(0)
                 <p class="font-body text-xs sm:text-sm text-white/80 font-light max-w-sm leading-relaxed mt-2 sm:mt-4">
                   {{ offer.description }}
                 </p>
-                <div class="mt-4 sm:mt-8">
-                  <span class="inline-flex items-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
-                    تصفح التشكيلة &larr;
-                  </span>
-                </div>
               </div>
             </div>
           </div>

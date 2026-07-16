@@ -7,7 +7,6 @@ const isMobileMenuOpen = ref(false)
 const navLinks = [
   { label: 'الرئيسية', href: '#home' },
   { label: 'التشكيلة', href: '#offers' },
-  { label: 'المعرض', href: '#gallery' },
   { label: 'الفروع', href: '#branches' },
   { label: 'تواصل معنا', href: '#contact' }
 ]
@@ -37,73 +36,68 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <div 
-    class="fixed top-0 start-0 w-full z-50 flex justify-center px-4 sm:px-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
-    :class="isScrolled ? 'pt-4' : 'pt-6'"
+  <header 
+    class="fixed top-0 inset-x-0 w-full z-50 transition-all duration-500 border-b pointer-events-auto"
+    :class="isScrolled 
+      ? 'bg-white/98 backdrop-blur-2xl border-black/10 shadow-[0_4px_30px_rgba(0,0,0,0.06)] py-3 sm:py-3.5' 
+      : 'bg-white/95 backdrop-blur-xl border-black/5 shadow-soft py-4 sm:py-5'"
   >
-    <header
-      class="pointer-events-auto flex items-center justify-between w-full max-w-5xl rounded-full px-4 sm:px-6 py-2.5 sm:py-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border"
-      :class="isScrolled 
-        ? 'bg-white/95 backdrop-blur-xl border-[#D4AF37]/30 shadow-luxury' 
-        : 'bg-white/70 backdrop-blur-md border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:bg-white/90'"
-    >
-      <!-- Logo -->
-      <a
-        href="#home"
-        class="flex items-center gap-3 group focus:outline-none"
-        data-cursor-text="Home"
-      >
-        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary flex items-center justify-center text-[#D4AF37] font-heading font-semibold text-lg tracking-tighter shadow-sm transition-transform duration-500 group-hover:scale-105">
-          2M
-        </div>
-        <div class="hidden sm:flex flex-col">
-          <span class="font-heading text-lg font-medium tracking-tight leading-none text-primary transition-colors duration-300">
-            2M
-          </span>
-          <span class="text-[8px] uppercase tracking-[0.3em] text-[#B59021] font-semibold mt-0.5">
-            براند أوتليت
-          </span>
-        </div>
-      </a>
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-2 md:grid-cols-3 items-center w-full">
+      <!-- Right Column: Brand Logo -->
+      <div class="flex items-center justify-start">
+        <a
+          href="#home"
+          class="flex items-center gap-3 group focus:outline-none"
+          data-cursor-text="Home"
+        >
+          <img
+            src="/website-logo.jpeg"
+            alt="Mervat Brand"
+            class="h-10 sm:h-12 w-auto mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+          />
+        </a>
+      </div>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-8">
+      <!-- Center Column: Navigation Links (Precisely Centered) -->
+      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-11">
         <a
           v-for="link in navLinks"
           :key="link.label"
           :href="link.href"
-          class="relative font-body text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 py-1 font-semibold text-primary/70 hover:text-primary group"
+          class="relative font-body text-[15px] lg:text-base font-bold transition-colors duration-300 py-1 text-[#1a1a1a] hover:text-[#B59021] group tracking-wide"
           data-cursor-text="Go"
         >
           {{ link.label }}
-          <span class="absolute inset-x-0 bottom-0 h-[1px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-start" />
+          <span class="absolute inset-x-0 bottom-0 h-[2px] bg-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center" />
         </a>
       </nav>
 
-      <!-- Desktop Action CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#gallery" data-cursor-text="تصفح">
-          <span class="px-5 py-2.5 rounded-full bg-primary text-white text-[9px] font-body font-bold uppercase tracking-[0.25em] hover:bg-[#B59021] hover:shadow-luxury transition-all duration-500">
-            تصفح
-          </span>
+      <!-- Left Column: Balanced Concierge Pill & Mobile Toggle -->
+      <div class="flex items-center justify-end gap-4">
+        <a
+          href="#contact"
+          class="hidden md:inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-black/[0.03] hover:bg-[#030303] text-[#1a1a1a] hover:text-[#D4AF37] border border-black/5 hover:border-[#030303] text-xs font-body font-bold transition-all duration-300 shadow-soft"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>خدمة العملاء</span>
         </a>
-      </div>
 
-      <!-- Mobile Menu Hamburger Button -->
-      <button
-        type="button"
-        class="md:hidden w-9 h-9 rounded-full flex items-center justify-center transition-colors duration-300 focus:outline-none text-primary hover:bg-black/5"
-        aria-label="Toggle Navigation Menu"
-        @click="toggleMobileMenu"
-      >
-        <svg v-if="!isMobileMenuOpen" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-        <svg v-else class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </header>
+        <!-- Mobile Menu Hamburger Button -->
+        <button
+          type="button"
+          class="md:hidden w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 focus:outline-none text-primary hover:bg-black/5"
+          aria-label="Toggle Navigation Menu"
+          @click="toggleMobileMenu"
+        >
+          <svg v-if="!isMobileMenuOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg v-else class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <!-- Mobile Drawer Menu -->
     <Transition
@@ -123,18 +117,14 @@ const toggleMobileMenu = () => {
             v-for="link in navLinks"
             :key="link.label"
             :href="link.href"
-            class="font-heading text-xl font-medium text-primary hover:text-[#B59021] py-3 border-b border-black/5 transition-colors"
+            class="font-body text-lg font-bold text-primary hover:text-[#B59021] py-3 border-b border-black/5 transition-colors"
             @click="isMobileMenuOpen = false"
           >
             {{ link.label }}
           </a>
-          <div class="pt-6 flex flex-col gap-3">
-            <a href="#gallery" @click="isMobileMenuOpen = false" class="w-full text-center px-5 py-3 rounded-full bg-primary text-white text-[10px] font-body font-bold uppercase tracking-[0.25em] hover:bg-[#B59021] transition-colors">
-              تصفح التشكيلة
-            </a>
-          </div>
+
         </nav>
       </div>
     </Transition>
-  </div>
+  </header>
 </template>

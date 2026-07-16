@@ -29,6 +29,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#111111' }
       ],
       link: [
+        { rel: 'icon', type: 'image/jpeg', href: '/website-logo.jpeg' },
+        { rel: 'apple-touch-icon', href: '/website-logo.jpeg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700;800;900&display=swap' }
