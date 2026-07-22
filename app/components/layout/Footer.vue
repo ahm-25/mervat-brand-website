@@ -12,6 +12,16 @@ import {
   ArrowUpRight
 } from 'lucide-vue-next'
 
+import { ref } from 'vue'
+
+const isPaymentModalOpen = ref(false)
+const selectedPaymentTab = ref<'instapay' | 'vodafone' | 'cod'>('instapay')
+
+const openPaymentModal = (tab: 'instapay' | 'vodafone' | 'cod') => {
+  selectedPaymentTab.value = tab
+  isPaymentModalOpen.value = true
+}
+
 const scrollToTop = () => {
   if (typeof window !== 'undefined') {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -196,8 +206,8 @@ const scrollToTop = () => {
                 شرم الشيخ
               </span>
               <div class="pe-6 space-y-2 border-s border-white/10 me-2">
-                <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع جنينة</a>
-                <span class="block text-sm text-gray-400">فرع حي النور</span>
+                <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع جليله سيتى خليج نعمه</a>
+                <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع طريق السلام امام مستشفى شرم الدولى مول الشريف</a>
               </div>
             </div>
             <div class="group cursor-default">
@@ -206,7 +216,7 @@ const scrollToTop = () => {
                 القاهرة
               </span>
               <div class="pe-6 border-s border-white/10 me-2">
-                <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع القاهرة</a>
+                <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع القاهرة - مدينة نصر</a>
               </div>
             </div>
           </div>
@@ -218,7 +228,7 @@ const scrollToTop = () => {
             <h4 class="text-[10px] font-sans font-bold text-[#D4AF37] uppercase tracking-[0.25em]">وسائل التواصل</h4>
             <ul class="space-y-4">
               <li><a href="https://www.instagram.com/2m_genena_city" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><Instagram class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> إنستغرام</a></li>
-              <li><a href="https://www.facebook.com/2mBrands" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><Facebook class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> فيسبوك</a></li>
+              <li><a href="https://www.facebook.com/share/g/1EbQMiUpY6/?mibextid=wwXlfr" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><Facebook class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> فيسبوك</a></li>
               <li><a href="https://www.tiktok.com/@2m_ginina_ciry" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300">
                 <svg class="w-4 h-4 fill-current group-hover:text-[#D4AF37] transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
@@ -230,45 +240,75 @@ const scrollToTop = () => {
         </div>
 
         <!-- Column 4: Payments -->
-        <div class="space-y-8">
-          <h4 class="text-[10px] font-sans font-bold text-[#D4AF37] uppercase tracking-[0.25em]">المدفوعات والخدمات</h4>
+        <div class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-[11px] font-body font-bold text-[#D4AF37] uppercase tracking-[0.2em]">المدفوعات والخدمات</h4>
+            <span class="text-[10px] text-gray-400 font-light">طرق الدفع والتحويل</span>
+          </div>
           
-          <div class="space-y-5">
-            <!-- InstaPay -->
-            <div class="group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#D4AF37]/30 hover:bg-white/10 transition-all duration-300 flex items-center gap-4 cursor-default">
-              <div class="w-10 h-10 rounded-lg bg-black/50 flex items-center justify-center text-[#D4AF37]">
-                <Zap class="w-5 h-5" />
+          <div class="space-y-3">
+            <!-- InstaPay 1 -->
+            <button
+              type="button"
+              @click="openPaymentModal('instapay')"
+              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
+            >
+              <div class="flex items-center gap-2.5 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Zap class="w-4 h-4" />
+                </div>
+                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">إنستا باي 1</span>
               </div>
-              <div>
-                <span class="block text-sm text-white font-medium">إنستا باي</span>
-                <span class="block text-[10px] text-gray-400 mt-0.5">تحويل فوري</span>
+              <span class="font-mono text-[11px] text-[#D4AF37] group-hover:underline truncate" dir="ltr">thabetloutfy93@instapay</span>
+            </button>
+
+            <!-- InstaPay 2 -->
+            <button
+              type="button"
+              @click="openPaymentModal('instapay')"
+              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
+            >
+              <div class="flex items-center gap-2.5 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Zap class="w-4 h-4" />
+                </div>
+                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">إنستا باي 2</span>
               </div>
-            </div>
+              <span class="font-mono text-[11px] text-[#D4AF37] group-hover:underline truncate" dir="ltr">boryu@instapay</span>
+            </button>
 
             <!-- Vodafone Cash -->
-            <div class="group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#D4AF37]/30 hover:bg-white/10 transition-all duration-300 flex items-center gap-4 cursor-default">
-              <div class="w-10 h-10 rounded-lg bg-black/50 flex items-center justify-center text-[#D4AF37]">
-                <Smartphone class="w-5 h-5" />
+            <button
+              type="button"
+              @click="openPaymentModal('vodafone')"
+              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#25D366]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
+            >
+              <div class="flex items-center gap-2.5 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-[#25D366] group-hover:scale-105 transition-transform">
+                  <Smartphone class="w-4 h-4" />
+                </div>
+                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#25D366] transition-colors">فودافون كاش</span>
               </div>
-              <div>
-                <span class="block text-sm text-white font-medium">فودافون كاش</span>
-                <span class="block text-[10px] text-gray-400 mt-0.5">محفظة هاتف</span>
-              </div>
-            </div>
+              <span class="font-mono text-[12px] font-bold text-[#25D366] group-hover:underline" dir="ltr">01062641050</span>
+            </button>
 
             <!-- Cash On Delivery -->
-            <div class="group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#D4AF37]/30 hover:bg-white/10 transition-all duration-300 flex items-center gap-4 cursor-default">
-              <div class="w-10 h-10 rounded-lg bg-black/50 flex items-center justify-center text-[#D4AF37]">
-                <Banknote class="w-5 h-5" />
+            <button
+              type="button"
+              @click="openPaymentModal('cod')"
+              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
+            >
+              <div class="flex items-center gap-2.5 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
+                  <Banknote class="w-4 h-4" />
+                </div>
+                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">الدفع عند الاستلام</span>
               </div>
-              <div>
-                <span class="block text-sm text-white font-medium">الدفع عند الاستلام</span>
-                <span class="block text-[10px] text-gray-400 mt-0.5">الدفع عند الباب</span>
-              </div>
-            </div>
+              <span class="text-[11px] text-gray-400 group-hover:text-white transition-colors">نقداً عند الاستلام ←</span>
+            </button>
             
-            <div class="pt-2">
-              <span class="inline-flex items-center gap-2 text-xs font-medium text-[#E28A8A] px-3 py-1.5 rounded-full bg-[#E28A8A]/10 border border-[#E28A8A]/20">
+            <div class="pt-3 flex items-center justify-between px-1">
+              <span class="inline-flex items-center gap-2 text-[11px] font-medium text-[#E28A8A] px-3 py-1.5 rounded-full bg-[#E28A8A]/10 border border-[#E28A8A]/20">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#E28A8A] animate-pulse"></span>
                 خدمة طوارئ 24/7
               </span>
@@ -296,5 +336,8 @@ const scrollToTop = () => {
       </div>
 
     </div>
+
+    <!-- Interactive Payment Details Modal -->
+    <UiPaymentModal v-model="isPaymentModalOpen" :initial-tab="selectedPaymentTab" />
   </footer>
 </template>

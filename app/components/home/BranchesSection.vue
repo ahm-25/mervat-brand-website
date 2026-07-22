@@ -4,24 +4,24 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const branches = [
   {
     id: 1,
-    city: 'Sharm El Sheikh',
-    name: 'El Genena',
-    address: 'El Genena City Mall',
-    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=1200&auto=format&fit=crop'
+    city: 'شرم الشيخ - Sharm El Sheikh',
+    name: 'فرع جليله سيتى خليج نعمه',
+    address: 'جليله سيتي - خليج نعمه',
+    image: '/images/480dc117-63f8-42c9-8f35-939c0b0ff629.jfif'
   },
   {
     id: 2,
-    city: 'Sharm El Sheikh',
-    name: 'Hay El Nour',
-    address: 'Hay El Nour District',
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop'
+    city: 'شرم الشيخ - Sharm El Sheikh',
+    name: 'فرع طريق السلام',
+    address: 'طريق السلام امام مستشفى شرم الدولى مول الشريف',
+    image: '/images/af22ec37-afcc-4a69-9ddc-d850beda4ba4.jfif'
   },
   {
     id: 3,
-    city: 'Cairo',
-    name: 'Cairo Branch',
-    address: 'Cairo, Egypt',
-    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop'
+    city: 'القاهرة - Cairo',
+    name: 'فرع القاهرة - مدينة نصر',
+    address: 'القاهرة - مدينة نصر',
+    image: '/images/d32a01ee-5f94-4d6b-b1e3-e5d810f31a90.jfif'
   }
 ]
 

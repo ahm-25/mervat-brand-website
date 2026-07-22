@@ -61,7 +61,7 @@ const timelineEvents = [
   {
     year: "2021",
     title: "الفرع الرئيسي بالقاهرة",
-    location: "التجمع الخامس",
+    location: "القاهرة - مدينة نصر",
     description: "وسعنا عروضنا لتشمل مجموعات كاملة من الأزياء الجاهزة وافتتحنا فرعنا الرئيسي في القاهرة لاستقبال عملائنا المميزين."
   },
   {
@@ -381,21 +381,26 @@ const timelineEvents = [
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <!-- Cairo Showroom Card -->
           <div class="group rounded-3xl bg-secondary/80 border border-[#D4AF37]/40 overflow-hidden shadow-luxury transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between">
-            <div class="p-8 sm:p-10 space-y-6">
-              <div class="flex items-start justify-between">
+            <!-- Store Image Header -->
+            <div class="relative h-56 w-full overflow-hidden bg-black/40">
+              <img src="/images/d32a01ee-5f94-4d6b-b1e3-e5d810f31a90.jfif" alt="فرع القاهرة مدينة نصر" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/40 to-transparent" />
+              <div class="absolute bottom-4 right-6 left-6 flex items-start justify-between">
                 <div>
-                  <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block">
-                    فرع العاصمة
+                  <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block drop-shadow-md">
+                    الفرع الرئيسي
                   </span>
-                  <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1">
+                  <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1 drop-shadow-md">
                     فرع القاهرة
                   </h3>
                 </div>
-                <div class="w-12 h-12 rounded-full bg-primary text-accent flex items-center justify-center font-heading font-bold text-xl shadow-sm">
+                <div class="w-12 h-12 rounded-full bg-primary text-accent flex items-center justify-center font-heading font-bold text-xl shadow-md border border-[#D4AF37]/30">
                   C
                 </div>
               </div>
+            </div>
 
+            <div class="p-8 sm:p-10 space-y-6 pt-4">
               <p class="text-muted-text text-base font-light leading-relaxed">
                 استمتعي بأرقى تشكيلات الإكسسوارات والمكياج والملابس في فرعنا بالقاهرة. اكتشفي تنوعاً واسعاً من الأزياء العصرية المصممة لتمنحك إطلالة استثنائية.
               </p>
@@ -403,7 +408,7 @@ const timelineEvents = [
               <div class="pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
                   <span class="font-mono text-muted-text uppercase block font-semibold">📍 الموقع</span>
-                  <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع القاهرة</a>
+                  <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع القاهرة - مدينة نصر</a>
                 </div>
               </div>
             </div>
@@ -416,21 +421,26 @@ const timelineEvents = [
 
           <!-- Sharm El Sheikh Showroom Card -->
           <div class="group rounded-3xl bg-secondary/80 border border-[#D4AF37]/40 overflow-hidden shadow-luxury transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between">
-            <div class="p-8 sm:p-10 space-y-6">
-              <div class="flex items-start justify-between">
+            <!-- Store Image Header -->
+            <div class="relative h-56 w-full overflow-hidden bg-black/40">
+              <img src="/images/480dc117-63f8-42c9-8f35-939c0b0ff629.jfif" alt="فروع شرم الشيخ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/40 to-transparent" />
+              <div class="absolute bottom-4 right-6 left-6 flex items-start justify-between">
                 <div>
-                  <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block">
+                  <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B59021] font-bold block drop-shadow-md">
                     فروع البحر الأحمر
                   </span>
-                  <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1">
+                  <h3 class="font-heading text-3xl sm:text-4xl font-medium text-primary mt-1 drop-shadow-md">
                     شرم الشيخ
                   </h3>
                 </div>
-                <div class="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-xl shadow-sm">
+                <div class="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-xl shadow-md border border-primary/20">
                   S
                 </div>
               </div>
+            </div>
 
+            <div class="p-8 sm:p-10 space-y-6 pt-4">
               <p class="text-muted-text text-base font-light leading-relaxed">
                 زورينا في شرم الشيخ واكتشفي فرعينا الرئيسيين. نوفر لكِ أوسع تشكيلة من الإكسسوارات والملابس، لتجدي كل ما تحتاجينه في مكان واحد.
               </p>
@@ -438,7 +448,10 @@ const timelineEvents = [
               <div class="pt-4 border-t border-muted-border">
                 <div class="space-y-1 text-xs">
                   <span class="font-mono text-muted-text uppercase block font-semibold">📍 الفروع</span>
-                  <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">فرع الجنينة<br/>فرع حي النور</a>
+                  <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-primary font-medium hover:text-[#B59021] transition-colors block">
+                    فرع جليله سيتى خليج نعمه<br/>
+                    فرع طريق السلام امام مستشفى شرم الدولى مول الشريف
+                  </a>
                 </div>
               </div>
             </div>

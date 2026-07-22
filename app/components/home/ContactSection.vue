@@ -10,6 +10,16 @@ import {
   Smartphone
 } from 'lucide-vue-next'
 
+import { ref } from 'vue'
+
+const isPaymentModalOpen = ref(false)
+const selectedPaymentTab = ref<'instapay' | 'vodafone' | 'cod'>('instapay')
+
+const openPaymentModal = (tab: 'instapay' | 'vodafone' | 'cod') => {
+  selectedPaymentTab.value = tab
+  isPaymentModalOpen.value = true
+}
+
 const phoneLines = [
   { label: 'للاستفسار', number: '01229094258', call: true, whatsapp: true },
   { label: 'للشكاوى — واتساب فقط', number: '01002294523', call: false, whatsapp: true },
@@ -109,7 +119,7 @@ const phoneLines = [
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/2mBrands" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
+                <a href="https://www.facebook.com/share/g/1EbQMiUpY6/?mibextid=wwXlfr" target="_blank" class="group flex items-center gap-4 text-primary text-xl sm:text-2xl font-heading font-normal" data-cursor-text="Follow">
                   <span class="transform group-hover:translate-x-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Facebook</span>
                 </a>
               </li>
@@ -149,35 +159,51 @@ const phoneLines = [
           </div>
 
           <!-- Payments -->
-          <div class="space-y-8 col-span-2 lg:col-span-1 pt-8 lg:pt-0 border-t lg:border-none border-muted-border/50">
-            <span class="text-[10px] font-mono text-[#D4AF37] tracking-widest block border-b border-muted-border pb-4">PAYMENTS</span>
-            <ul class="space-y-6">
-              <li class="flex items-center gap-4 group cursor-pointer" data-cursor-text="Secure">
-                <div class="w-10 h-10 rounded-full border border-muted-border bg-secondary/50 flex items-center justify-center shrink-0 group-hover:bg-purple-50 group-hover:border-purple-200 transition-colors duration-500">
-                  <Zap class="w-4 h-4 text-primary/40 group-hover:text-purple-600 transition-colors duration-500" />
+          <div class="space-y-6 col-span-2 lg:col-span-1 pt-8 lg:pt-0 border-t lg:border-none border-muted-border/50">
+            <span class="text-[10px] font-mono text-[#D4AF37] tracking-widest block border-b border-muted-border pb-3">PAYMENTS (طرق الدفع والتحويل)</span>
+            <ul class="space-y-3">
+              <!-- InstaPay 1 -->
+              <li @click="openPaymentModal('instapay')" class="p-3 rounded-xl bg-secondary/30 border border-muted-border hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer group shadow-sm" data-cursor-text="Pay">
+                <div class="flex items-center gap-3 shrink-0">
+                  <div class="w-9 h-9 rounded-lg border border-muted-border bg-secondary/80 flex items-center justify-center shrink-0 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-colors duration-300">
+                    <Zap class="w-4 h-4 text-[#D4AF37] group-hover:text-purple-400 transition-colors duration-300" />
+                  </div>
+                  <span class="font-heading text-sm font-bold text-primary group-hover:text-[#D4AF37] transition-colors">إنستا باي 1</span>
                 </div>
-                <div>
-                  <span class="block font-heading text-lg text-primary">InstaPay</span>
-                  <span class="block text-[10px] font-mono text-muted-text">Instant Transfer</span>
-                </div>
+                <span class="font-mono text-xs text-[#D4AF37] font-semibold truncate" dir="ltr">thabetloutfy93@instapay</span>
               </li>
-              <li class="flex items-center gap-4 group cursor-pointer" data-cursor-text="Secure">
-                <div class="w-10 h-10 rounded-full border border-muted-border bg-secondary/50 flex items-center justify-center shrink-0 group-hover:bg-red-50 group-hover:border-red-200 transition-colors duration-500">
-                  <Smartphone class="w-4 h-4 text-primary/40 group-hover:text-red-600 transition-colors duration-500" />
+
+              <!-- InstaPay 2 -->
+              <li @click="openPaymentModal('instapay')" class="p-3 rounded-xl bg-secondary/30 border border-muted-border hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer group shadow-sm" data-cursor-text="Pay">
+                <div class="flex items-center gap-3 shrink-0">
+                  <div class="w-9 h-9 rounded-lg border border-muted-border bg-secondary/80 flex items-center justify-center shrink-0 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-colors duration-300">
+                    <Zap class="w-4 h-4 text-[#D4AF37] group-hover:text-purple-400 transition-colors duration-300" />
+                  </div>
+                  <span class="font-heading text-sm font-bold text-primary group-hover:text-[#D4AF37] transition-colors">إنستا باي 2</span>
                 </div>
-                <div>
-                  <span class="block font-heading text-lg text-primary">Vodafone Cash</span>
-                  <span class="block text-[10px] font-mono text-muted-text">Mobile Wallet</span>
-                </div>
+                <span class="font-mono text-xs text-[#D4AF37] font-semibold truncate" dir="ltr">boryu@instapay</span>
               </li>
-              <li class="flex items-center gap-4 group cursor-pointer" data-cursor-text="In-Store">
-                <div class="w-10 h-10 rounded-full border border-muted-border bg-secondary/50 flex items-center justify-center shrink-0 group-hover:bg-emerald-50 group-hover:border-emerald-200 transition-colors duration-500">
-                  <Banknote class="w-4 h-4 text-primary/40 group-hover:text-emerald-600 transition-colors duration-500" />
+
+              <!-- Vodafone Cash -->
+              <li @click="openPaymentModal('vodafone')" class="p-3 rounded-xl bg-secondary/30 border border-muted-border hover:border-[#25D366]/60 transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer group shadow-sm" data-cursor-text="Pay">
+                <div class="flex items-center gap-3 shrink-0">
+                  <div class="w-9 h-9 rounded-lg border border-muted-border bg-secondary/80 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-colors duration-300">
+                    <Smartphone class="w-4 h-4 text-[#25D366] group-hover:text-emerald-400 transition-colors duration-300" />
+                  </div>
+                  <span class="font-heading text-sm font-bold text-primary group-hover:text-[#25D366] transition-colors">فودافون كاش</span>
                 </div>
-                <div>
-                  <span class="block font-heading text-lg text-primary">Cash</span>
-                  <span class="block text-[10px] font-mono text-muted-text">On Delivery / Store</span>
+                <span class="font-mono text-sm font-bold text-[#25D366]" dir="ltr">01062641050</span>
+              </li>
+
+              <!-- Cash on Delivery -->
+              <li @click="openPaymentModal('cod')" class="p-3 rounded-xl bg-secondary/30 border border-muted-border hover:border-white/30 transition-all duration-300 flex items-center justify-between gap-3 cursor-pointer group shadow-sm" data-cursor-text="Details">
+                <div class="flex items-center gap-3 shrink-0">
+                  <div class="w-9 h-9 rounded-lg border border-muted-border bg-secondary/80 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors duration-300">
+                    <Banknote class="w-4 h-4 text-[#D4AF37] transition-colors duration-300" />
+                  </div>
+                  <span class="font-heading text-sm font-bold text-primary">الدفع عند الاستلام</span>
                 </div>
+                <span class="text-xs text-muted-text">نقداً عند الاستلام ←</span>
               </li>
             </ul>
           </div>
@@ -185,6 +211,9 @@ const phoneLines = [
         </div>
       </div>
     </div>
+
+    <!-- Interactive Payment Details Modal -->
+    <UiPaymentModal v-model="isPaymentModalOpen" :initial-tab="selectedPaymentTab" />
   </section>
 </template>
 
