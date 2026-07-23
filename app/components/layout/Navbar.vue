@@ -41,7 +41,7 @@ const toggleMobileMenu = () => {
     :class="isScrolled ? 'pt-4' : 'pt-6'"
   >
     <header
-      class="pointer-events-auto grid grid-cols-2 md:grid-cols-3 items-center w-full max-w-5xl rounded-full px-6 sm:px-8 py-2.5 sm:py-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border bg-white border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
+      class="pointer-events-auto grid grid-cols-2 md:grid-cols-3 items-center w-full max-w-5xl rounded-full px-6 sm:px-8 py-1.5 sm:py-2 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border bg-white border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
       :class="isScrolled ? 'shadow-luxury border-[#D4AF37]/30' : ''"
     >
       <!-- Column 1: Logo (Aligned to Right in RTL) -->
@@ -54,7 +54,7 @@ const toggleMobileMenu = () => {
           <img
             src="/website-logo.jpeg"
             alt="Mervat Brand"
-            class="h-10 sm:h-12 w-auto mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+            class="h-8 sm:h-9 w-auto mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
           />
         </a>
       </div>

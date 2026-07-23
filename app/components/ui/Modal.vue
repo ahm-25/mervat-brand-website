@@ -52,7 +52,7 @@ const widthClasses = {
     >
       <div
         v-if="modelValue"
-        class="fixed inset-0 z-50 overflow-y-auto bg-primary/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+        class="fixed inset-0 z-[100] overflow-y-auto bg-primary/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
         @click.self="close"
       >
         <Transition

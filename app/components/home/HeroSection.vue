@@ -22,7 +22,7 @@ const scrollToNext = () => {
 <template>
   <section
     id="home"
-    class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-primary"
+    class="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-primary pt-32 sm:pt-40 pb-20"
   >
     <!-- Immersive Background Video / Image -->
     <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -39,7 +39,7 @@ const scrollToNext = () => {
     </div>
 
     <!-- Editorial Typography Layer -->
-    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center pt-24 md:pt-32">
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center">
       
       <!-- Overline -->
       <div class="overflow-hidden mb-6">

@@ -176,140 +176,85 @@ const scrollToTop = () => {
       </div>
 
       <!-- Main Grid Layout -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 py-20">
         
         <!-- Column 1: The Brand -->
-        <div class="space-y-8">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#B59021] p-[1px]">
-              <div class="w-full h-full bg-[#030303] rounded-xl flex items-center justify-center">
-                <span class="font-heading font-bold text-2xl text-[#D4AF37]">2M</span>
-              </div>
-            </div>
-            <div>
-              <span class="font-heading font-normal tracking-wider text-2xl block leading-none text-white">MERVAT</span>
-              <span class="text-[9px] text-[#D4AF37] uppercase tracking-[0.3em] font-bold mt-1 block">Brand Outlet</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-400 font-light leading-relaxed">
-            أكبر تشكيلة من الملابس والمكياج والإكسسوارات العصرية بتخفيضات مستمرة. كل ما تحتاجينه للتسوق في مكان واحد.
+        <div class="lg:col-span-4 space-y-6">
+          <a href="#home" class="inline-block group">
+            <h2 class="font-heading text-4xl text-white tracking-wider flex items-baseline gap-2">
+              2M <span class="text-[#D4AF37] font-light">MERVAT</span>
+            </h2>
+            <span class="text-[9px] text-gray-500 uppercase tracking-[0.4em] font-medium mt-2 block group-hover:text-[#D4AF37] transition-colors">Brand Outlet</span>
+          </a>
+          <p class="text-sm text-gray-400 font-light leading-relaxed max-w-sm">
+            وجهتك الأولى لأرقى تشكيلات الملابس، المكياج، والإكسسوارات العصرية. نقدم لك الفخامة بتخفيضات مستمرة.
           </p>
         </div>
 
         <!-- Column 2: Branches -->
-        <div class="space-y-8 lg:pe-8">
-          <h4 class="text-[10px] font-sans font-bold text-[#D4AF37] uppercase tracking-[0.25em]">فروعنا</h4>
+        <div class="lg:col-span-3 space-y-6 lg:pe-8">
+          <h4 class="text-xs font-body font-semibold text-white uppercase tracking-widest">الفروع</h4>
           <div class="space-y-6">
-            <div class="group cursor-default">
-              <span class="flex items-center gap-2 text-sm text-white mb-2">
-                <MapPin class="w-4 h-4 text-[#D4AF37]" />
-                شرم الشيخ
-              </span>
-              <div class="pe-6 space-y-2 border-s border-white/10 me-2">
-                <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع جليله سيتى خليج نعمه</a>
-                <a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع طريق السلام امام مستشفى شرم الدولى مول الشريف</a>
-              </div>
+            <div class="space-y-3">
+              <span class="text-sm text-[#D4AF37] block font-medium">شرم الشيخ</span>
+              <ul class="space-y-2">
+                <li><a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-xs text-gray-400 hover:text-white transition-colors block leading-relaxed">فرع جليله سيتى خليج نعمه</a></li>
+                <li><a href="https://share.google/NJJf6LzntyEGHmTKz" target="_blank" class="text-xs text-gray-400 hover:text-white transition-colors block leading-relaxed">طريق السلام، أمام مستشفى شرم الدولي</a></li>
+              </ul>
             </div>
-            <div class="group cursor-default">
-              <span class="flex items-center gap-2 text-sm text-white mb-2">
-                <MapPin class="w-4 h-4 text-[#D4AF37]" />
-                القاهرة
-              </span>
-              <div class="pe-6 border-s border-white/10 me-2">
-                <a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="block text-sm text-gray-400 hover:text-[#D4AF37] transition-colors duration-300">فرع القاهرة - مدينة نصر</a>
-              </div>
+            <div class="space-y-3">
+              <span class="text-sm text-[#D4AF37] block font-medium">القاهرة</span>
+              <ul class="space-y-2">
+                <li><a href="https://maps.app.goo.gl/jDXHZaxJdhbsxAbe7" target="_blank" class="text-xs text-gray-400 hover:text-white transition-colors block leading-relaxed">مدينة نصر</a></li>
+              </ul>
             </div>
           </div>
         </div>
 
         <!-- Column 3: Social & Services -->
-        <div class="space-y-12">
-          <div class="space-y-6">
-            <h4 class="text-[10px] font-sans font-bold text-[#D4AF37] uppercase tracking-[0.25em]">وسائل التواصل</h4>
-            <ul class="space-y-4">
-              <li><a href="https://www.instagram.com/2m_genena_city" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><Instagram class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> إنستغرام</a></li>
-              <li><a href="https://www.facebook.com/share/g/1EbQMiUpY6/?mibextid=wwXlfr" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><Facebook class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> فيسبوك</a></li>
-              <li><a href="https://www.tiktok.com/@2m_ginina_ciry" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300">
-                <svg class="w-4 h-4 fill-current group-hover:text-[#D4AF37] transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
-                </svg> تيك توك
-              </a></li>
-              <li><a href="https://chat.whatsapp.com/KmONCWE5f4GKzyJoAHGt8z" target="_blank" class="group flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors duration-300"><MessageCircle class="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" /> واتساب</a></li>
-            </ul>
-          </div>
+        <div class="lg:col-span-2 space-y-6">
+          <h4 class="text-xs font-body font-semibold text-white uppercase tracking-widest">تواصل معنا</h4>
+          <ul class="space-y-3">
+            <li><a href="https://www.instagram.com/2m_genena_city" target="_blank" class="group flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors"><Instagram class="w-3.5 h-3.5 group-hover:text-[#D4AF37] transition-colors" /> إنستغرام</a></li>
+            <li><a href="https://www.facebook.com/share/g/1EbQMiUpY6/?mibextid=wwXlfr" target="_blank" class="group flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors"><Facebook class="w-3.5 h-3.5 group-hover:text-[#D4AF37] transition-colors" /> فيسبوك</a></li>
+            <li><a href="https://www.tiktok.com/@2m_ginina_ciry" target="_blank" class="group flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current group-hover:text-[#D4AF37] transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+              </svg> تيك توك
+            </a></li>
+            <li><a href="https://chat.whatsapp.com/KmONCWE5f4GKzyJoAHGt8z" target="_blank" class="group flex items-center gap-3 text-xs text-gray-400 hover:text-white transition-colors"><MessageCircle class="w-3.5 h-3.5 group-hover:text-[#D4AF37] transition-colors" /> واتساب</a></li>
+          </ul>
         </div>
 
         <!-- Column 4: Payments -->
-        <div class="space-y-6">
-          <div class="flex items-center justify-between">
-            <h4 class="text-[11px] font-body font-bold text-[#D4AF37] uppercase tracking-[0.2em]">المدفوعات والخدمات</h4>
-            <span class="text-[10px] text-gray-400 font-light">طرق الدفع والتحويل</span>
-          </div>
+        <div class="lg:col-span-3 space-y-6">
+          <h4 class="text-xs font-body font-semibold text-white uppercase tracking-widest">طرق الدفع والخدمات</h4>
           
-          <div class="space-y-3">
-            <!-- InstaPay 1 -->
-            <button
-              type="button"
-              @click="openPaymentModal('instapay')"
-              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
-            >
-              <div class="flex items-center gap-2.5 shrink-0">
-                <div class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
-                  <Zap class="w-4 h-4" />
-                </div>
-                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">إنستا باي 1</span>
+          <div class="space-y-2">
+            <button @click="openPaymentModal('instapay')" class="w-full group py-2 px-3 rounded-lg hover:bg-white/5 transition-colors flex items-center justify-between text-start cursor-pointer border border-transparent hover:border-white/10">
+              <div class="flex items-center gap-3">
+                <Zap class="w-4 h-4 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <span class="text-xs text-gray-300 group-hover:text-white transition-colors">إنستا باي</span>
               </div>
-              <span class="font-mono text-[11px] text-[#D4AF37] group-hover:underline truncate" dir="ltr">thabetloutfy93@instapay</span>
             </button>
 
-            <!-- InstaPay 2 -->
-            <button
-              type="button"
-              @click="openPaymentModal('instapay')"
-              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
-            >
-              <div class="flex items-center gap-2.5 shrink-0">
-                <div class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
-                  <Zap class="w-4 h-4" />
-                </div>
-                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">إنستا باي 2</span>
+            <button @click="openPaymentModal('vodafone')" class="w-full group py-2 px-3 rounded-lg hover:bg-white/5 transition-colors flex items-center justify-between text-start cursor-pointer border border-transparent hover:border-white/10">
+              <div class="flex items-center gap-3">
+                <Smartphone class="w-4 h-4 text-[#25D366] group-hover:text-emerald-400 transition-colors" />
+                <span class="text-xs text-gray-300 group-hover:text-white transition-colors">فودافون كاش</span>
               </div>
-              <span class="font-mono text-[11px] text-[#D4AF37] group-hover:underline truncate" dir="ltr">boryu@instapay</span>
             </button>
 
-            <!-- Vodafone Cash -->
-            <button
-              type="button"
-              @click="openPaymentModal('vodafone')"
-              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#25D366]/60 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
-            >
-              <div class="flex items-center gap-2.5 shrink-0">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-[#25D366] group-hover:scale-105 transition-transform">
-                  <Smartphone class="w-4 h-4" />
-                </div>
-                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#25D366] transition-colors">فودافون كاش</span>
+            <button @click="openPaymentModal('cod')" class="w-full group py-2 px-3 rounded-lg hover:bg-white/5 transition-colors flex items-center justify-between text-start cursor-pointer border border-transparent hover:border-white/10">
+              <div class="flex items-center gap-3">
+                <Banknote class="w-4 h-4 text-[#D4AF37] group-hover:text-yellow-400 transition-colors" />
+                <span class="text-xs text-gray-300 group-hover:text-white transition-colors">الدفع عند الاستلام</span>
               </div>
-              <span class="font-mono text-[12px] font-bold text-[#25D366] group-hover:underline" dir="ltr">01062641050</span>
-            </button>
-
-            <!-- Cash On Delivery -->
-            <button
-              type="button"
-              @click="openPaymentModal('cod')"
-              class="w-full group p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-between gap-2 text-start cursor-pointer shadow-sm"
-            >
-              <div class="flex items-center gap-2.5 shrink-0">
-                <div class="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-[#D4AF37] group-hover:scale-105 transition-transform">
-                  <Banknote class="w-4 h-4" />
-                </div>
-                <span class="text-xs sm:text-sm font-medium text-white group-hover:text-[#D4AF37] transition-colors">الدفع عند الاستلام</span>
-              </div>
-              <span class="text-[11px] text-gray-400 group-hover:text-white transition-colors">نقداً عند الاستلام ←</span>
             </button>
             
-            <div class="pt-3 flex items-center justify-between px-1">
-              <span class="inline-flex items-center gap-2 text-[11px] font-medium text-[#E28A8A] px-3 py-1.5 rounded-full bg-[#E28A8A]/10 border border-[#E28A8A]/20">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#E28A8A] animate-pulse"></span>
+            <div class="pt-4 mt-4 border-t border-white/5">
+              <span class="inline-flex items-center gap-2 text-[10px] font-medium text-[#D4AF37] px-3 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
                 خدمة طوارئ 24/7
               </span>
             </div>
